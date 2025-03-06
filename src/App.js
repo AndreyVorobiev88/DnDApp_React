@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import "./CharacterComponent.css" 
+import Necromancer from "./Resources/Necromancer.JPG"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="main" className="main_div_style">
+
+        <div className="main_div_style">
+            <img src = {Necromancer} className={"image_radius"} alt = "portrait"></img>
+        </div>
+
+        <div className="main_div_style">           
+            
+            "Some text"  </div>
+
     </div>
-  );
+)
 }
 
 export default App;
