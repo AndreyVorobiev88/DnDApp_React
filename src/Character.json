@@ -1,0 +1,44 @@
+{
+    "Name": "string",
+    "Race": "string",
+    "Class": "string",
+    "SubClass": "string",
+    "Outlook": "string",
+    "Level": "string",
+    "SkillLevel": "string",
+
+    "Stats": [
+
+        {
+            "StatName": "string",
+            "Value": "string",
+            "Bonus": "string",
+            "Skills": [
+                {
+                    "SkillName": "string",
+                    "Bonus": ""
+                }
+            ]
+        }
+
+
+    ],
+
+    "Spells": [
+
+        {
+            "SpellName":"string",
+            "School":"string",
+            "Level": "string",
+            "Damage": "string",
+            "Description": "string"
+
+        }
+
+    ],
+
+    "SpecialSkills": "string",
+    "Inventory": "string"
+
+
+}

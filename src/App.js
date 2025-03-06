@@ -14,7 +14,8 @@ function App() {
             
             "Some text"  </div>
 
-    </div>
+        </div>
+        
 )
 }
 
