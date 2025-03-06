@@ -1,6 +1,8 @@
 import './App.css';
-import "./CharacterComponent.css" 
 import Necromancer from "./Resources/Necromancer.JPG"
+import './Components/Panel'
+import { Panel } from './Components/Panel';
+
 
 function App() {
   return (
@@ -11,12 +13,13 @@ function App() {
         </div>
 
         <div className="main_div_style">           
-            
-            "Some text"  </div>
-
+            "Some text"  
+            <Panel></Panel>
         </div>
+
+    </div>
         
-)
+    )
 }
 
 export default App;

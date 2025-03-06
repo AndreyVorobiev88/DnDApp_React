@@ -1,3 +1,15 @@
+.image_radius {
+  border-radius: 15px;  /* Скругление углов изображения */
+  border: 15px solid #fff; /* Цвет и ширину рамки */
+  box-shadow: 2px 1px 5px #999999; /* Цвет и размер тени */
+}
+
+
+.main_div_style {
+  float: left;
+}
+
+
 
 .App {
   text-align: center;
