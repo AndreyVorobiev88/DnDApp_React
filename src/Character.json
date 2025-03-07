@@ -10,17 +10,77 @@
     "Stats": [
 
         {
-            "StatName": "string",
-            "Value": "string",
-            "Bonus": "string",
+            "StatName": "Сила",
+            "Value": "13",
+            "Bonus": "+3",
             "Skills": [
                 {
-                    "SkillName": "string",
-                    "Bonus": ""
+                    "SkillName": "Владение мечом",
+                    "Bonus": "+2"
+                }
+            ]
+        },
+        {
+            "StatName": "Ловкость",
+            "Value": "11",
+            "Bonus": "+1",
+            "Skills": [
+                {
+                    "SkillName": "Владение мечом",
+                    "Bonus": "+2"
+                }
+            ]
+        },
+
+        {
+            "StatName": "Телосложение",
+            "Value": "11",
+            "Bonus": "+1",
+            "Skills": [
+                {
+                    "SkillName": "Владение мечом",
+                    "Bonus": "+2"
+                }
+            ]
+        },
+
+
+        {
+            "StatName": "Интеллект",
+            "Value": "15",
+            "Bonus": "+3",
+            "Skills": [
+                {
+                    "SkillName": "Владение мечом",
+                    "Bonus": "+2"
+                }
+            ]
+        },
+
+        
+        {
+            "StatName": "Мудрость",
+            "Value": "11",
+            "Bonus": "+1",
+            "Skills": [
+                {
+                    "SkillName": "Владение мечом",
+                    "Bonus": "+2"
+                }
+            ]
+        },
+
+        {
+            "StatName": "Харизма",
+            "Value": "15",
+            "Bonus": "+3",
+            "Skills": [
+                {
+                    "SkillName": "Владение мечом",
+                    "Bonus": "+2"
                 }
             ]
         }
-
 
     ],
 
