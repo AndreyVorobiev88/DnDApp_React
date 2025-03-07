@@ -1,0 +1,41 @@
+.div_panel {
+    border-radius: 8px;
+    box-shadow: 0 0 5px #999;
+    -webkit-border-radius: 8px;
+    -webkit-box-shadow: 0 0 5px #999;
+    -moz-border-radius: 8px;
+    -moz-box-shadow: 0 0 5px #999;
+    height: 460;
+    width: 320;
+    align-items: center;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.text_stat
+{
+    font-weight: 550;
+    font-style:italic;
+    margin-top: 15px;
+    color: lightslategrey;
+    
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.text_value
+{
+    font-style:italic;
+    font-weight: 700;
+    color:rgb(4, 50, 17);
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.text_SkillLevel
+{
+    font-style:italic;
+    font-weight: 700;
+    color:rgb(91, 131, 11);
+}

@@ -6,7 +6,7 @@
 
 
 .main_div_style {
-  float: left;
+  display: flex;
 }
 
 
