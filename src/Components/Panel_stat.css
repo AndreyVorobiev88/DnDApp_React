@@ -16,15 +16,6 @@
     text-align:left;
   }
 
-  .text_info_margin
-  {
-      font-weight: 550;
-      font-style:italic;
-      color: lightslategrey;  
-      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      margin-left: auto;
-  
-  }
 
 .text_stat
 {
@@ -61,6 +52,7 @@
     box-shadow: 2px 1px 2px #999999; /* Цвет и размер тени */
     margin: 5px;
     height: 70px;
-    width: 50px;
-    
+    width: 70px;
+    border-radius: 50%;
+    filter: hue-rotate(90deg);
   }

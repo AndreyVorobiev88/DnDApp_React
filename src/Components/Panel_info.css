@@ -40,11 +40,12 @@
     font-style:italic;
     font-weight: 700;
     color:rgb(91, 131, 11);
+    font-size:larger;
 }
 
 .image_radius {
     border-radius: 15px;  /* Скругление углов изображения */
     border: 15px solid #fff; /* Цвет и ширину рамки */
     box-shadow: 2px 1px 5px #999999; /* Цвет и размер тени */
-    margin: 10px
+    margin: 10px,
   }
