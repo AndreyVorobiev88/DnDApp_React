@@ -6,10 +6,13 @@ import constitution from "./Resources/Constitution.JPG"
 import intelligence from "./Resources/Intelligence.JPG"
 import wisdom from "./Resources/Wisdom.JPG"
 import charisma from "./Resources/Charisma.JPG"
+import KD from "./Resources/KD.JPG"
+import HP from "./Resources/HP.JPG"
 
 import Panel from './Components/Panel_info';
 import PanelStat from './Components/Panel_stat';
 import data from "./Character.json"
+import Badge from './Components/Badge';
 
 
 function App() {
@@ -17,12 +20,24 @@ function App() {
 
         <div id="main" className="main_div_style">
 
-                <div>
-                <img src = {Portrait} className={"image_radius"} alt = "portrait"></img>
+                <div ClassName="div_vertical">
+                    <img src = {Portrait} className={"image_radius"} alt = "portrait"></img>
+                    <div className='main_div_style'>
+                        <Badge Picture={KD} Value={data.KD}></Badge>
+                        <Badge Picture={HP} Value={data.HP + "/" + data.HP}></Badge>
+                    </div>
+
                 </div>
 
-                <Panel Name={data.Name} Race={data.Race} ClassName={data.ClassName} SubClass={data.SubClass} Outlook={data.Outlook} Level={data.Level} 
-                SkillLevel={data.SkillLevel}/>
+                <Panel 
+                    Name={data.Name} 
+                    Race={data.Race} 
+                    ClassName={data.ClassName} 
+                    SubClass={data.SubClass} 
+                    Outlook={data.Outlook} 
+                    Level={data.Level} 
+                    SkillLevel={data.SkillLevel}
+                />
 
                 <div>
                     <PanelStat Picture={strength} StatName={data.Stats[0].StatName} Value={data.Stats[0].Value}
