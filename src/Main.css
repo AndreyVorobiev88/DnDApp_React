@@ -1,0 +1,46 @@
+.main_panel {
+    box-shadow: 2px 1px 5px #999999; /* Цвет и размер тени */
+    -webkit-box-shadow: 0 0 5px #999;
+    border-radius: 15px;  /* Скругление углов изображения */
+    border: 15px solid #fff; /* Цвет и ширину рамки */
+    -webkit-border-radius: 8px;
+    margin: 10px
+    
+  }
+
+  .main_div_horizontal {
+    display: flex;
+  }
+  
+  .main_div_vertical{
+    display: flex;
+    flex-direction: column;
+  
+  }
+
+  .main_text_info
+{
+    font-weight: 550;
+    font-style:italic;
+    color: lightslategrey;  
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.main_text_bonus
+{
+    font-style:italic;
+    font-weight: 700;
+    color:rgb(91, 131, 11);
+    font-size:x-large;
+    margin-left: 15px;
+    text-align:right;
+}
+
+.main_text_value
+{
+    font-style:italic;
+    font-weight: 700;
+    color:rgb(4, 50, 17);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

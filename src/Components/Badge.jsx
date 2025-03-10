@@ -5,10 +5,10 @@ function Badge(props) {
 
     return (
 
-        <div className="div_badge_vertical">
+        <div className="main_div_vertical align_center">
 
-            <img src={props.Picture} className="image_badge shadow border_radius" alt=""></img>
-            <span className="text_under_badge">{props.Value}</span>
+            <img src={props.Picture} className="image_badge main_panel" alt=""></img>
+            <span className="main_text_value text_larger">{props.Value}</span>
 
         </div>
 

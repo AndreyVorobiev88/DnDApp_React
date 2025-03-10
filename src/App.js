@@ -1,4 +1,6 @@
 import './App.css';
+import './Main.css';
+
 import Portrait from "./Resources/Portrait.JPG"
 import strength from "./Resources/Strength.jpg"
 import dexterity from "./Resources/Dexterity.JPG"
@@ -23,11 +25,11 @@ function App() {
   return (
 
         <div>
-            <div id="main" className="main_div_style">
+            <div id="main" className="main_div_horizontal">
 
-                <div ClassName="div_vertical">
-                    <img src = {Portrait} className={"image_radius"} alt = "portrait"></img>
-                    <div className='main_div_style'>
+                <div ClassName="main_div_vertical main_panel">
+                    <img src = {Portrait} className={"main_panel"} alt = "portrait"></img>
+                    <div className='main_div_horizontal'>
                         <Badge Picture={KD} Value={data.KD}></Badge>
                         <Badge Picture={HP} Value={data.HP + "/" + data.HP}></Badge>
                         <Badge Picture={speed} Value={data.Speed}></Badge>
@@ -35,17 +37,17 @@ function App() {
                     </div>
 
                 </div>
-                <Panel 
-                    Name={data.Name} 
-                    Race={data.Race} 
-                    ClassName={data.ClassName} 
-                    SubClass={data.SubClass} 
-                    Outlook={data.Outlook} 
-                    Level={data.Level} 
-                    SkillLevel={data.SkillLevel}
-                    Size={data.Size}
-                    
-                />
+                    <Panel 
+                        Name={data.Name} 
+                        Race={data.Race} 
+                        ClassName={data.ClassName} 
+                        SubClass={data.SubClass} 
+                        Outlook={data.Outlook} 
+                        Level={data.Level} 
+                        SkillLevel={data.SkillLevel}
+                        Size={data.Size}
+                        
+                    />
 
                 <div>
                     <PanelStat Picture={strength} StatName={data.Stats[0].StatName} Value={data.Stats[0].Value}
@@ -70,12 +72,12 @@ function App() {
                      />
 
                 </div>
-            </div>
 
+                <div>
 
-            <div className='div_vertical'>
+                    <AccordeonSpell></AccordeonSpell>
 
-                <AccordeonSpell></AccordeonSpell>
+                </div>
 
             </div>
 

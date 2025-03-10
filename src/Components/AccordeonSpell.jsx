@@ -8,6 +8,8 @@ function AccordeonSpell(props) {
 
 
     return (
+
+      <div className="main_div_horizontal main_panel">
         <Accordion.Root defaultValue={['React']} collapsible>
           {['React', 'Solid', 'Vue'].map((item) => (
             <Accordion.Item key={item} value={item}>
@@ -21,8 +23,9 @@ function AccordeonSpell(props) {
             </Accordion.Item>
           ))}
         </Accordion.Root>
-      )
-
+      
+      </div>
+    )
 }
 
 export default AccordeonSpell

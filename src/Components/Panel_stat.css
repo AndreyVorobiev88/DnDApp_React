@@ -1,9 +1,4 @@
-.div_stat_panel {
-    border-radius: 15px;
-    box-shadow: 2px 1px 5px #999999; /* Цвет и размер тени */
-    -webkit-border-radius: 8px;
-    -webkit-box-shadow: 0 0 5px #999;
-    margin: 10px;
+.div_stat {
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
@@ -17,42 +12,24 @@
   }
 
 
-.text_stat
+.text_stat_info
 {
-    font-weight: 550;
-    font-style:italic;
-    color: lightslategrey;  
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: larger;
 
 }
 
 .text_stat_value
 {
-    font-style:italic;
-    font-weight: 700;
-    color:rgb(4, 50, 17);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: larger;
-}
-
-.text_stat_SkillLevel
-{
-    font-style:italic;
-    font-weight: 700;
-    color:rgb(91, 131, 11);
-    font-size:x-large;
-    margin-left: 15px;
-    text-align:right;
+    margin-left: 5px;
 }
 
 .image_stat {
-    border-radius: 2px;  /* Скругление углов изображения */
     border: 2px solid #fff; /* Цвет и ширину рамки */
     box-shadow: 2px 1px 2px #999999; /* Цвет и размер тени */
     margin: 5px;
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     filter: hue-rotate(90deg);
   }

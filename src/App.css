@@ -1,21 +1,3 @@
-.image_radius {
-  border-radius: 15px;  /* Скругление углов изображения */
-  border: 15px solid #fff; /* Цвет и ширину рамки */
-  box-shadow: 2px 1px 5px #999999; /* Цвет и размер тени */
-  margin: 10px
-}
-
-
-.main_div_style {
-  display: flex;
-}
-
-.div_vertical{
-  display: flex;
-  flex-direction: column;
-
-}
-
 
 .App {
   text-align: center;
