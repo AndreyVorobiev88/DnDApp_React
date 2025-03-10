@@ -23,6 +23,8 @@ function Panel (props) {
 
                 <div className="div_margin"><span className="text_info">Уровень мастерства: </span> <span className="text_SkillLevel">{props.SkillLevel}</span></div>
 
+                <div className="div_margin"><span className="text_info">Размер существа: </span> <span className="text_value">{props.Size}</span></div>
+
                 <div><img src = {Dice20} className="image_radius" alt = "portrait"></img></div>
 
             </div>          

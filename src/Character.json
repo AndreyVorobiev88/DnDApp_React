@@ -6,16 +6,19 @@
     "Outlook": "Хаотично-хороший",
     "Level": "5",
     "SkillLevel": "+3",
+    "Size": "C",
 
     "KD": "10",
     "HP": "28",
+    "Speed": "30",
+    "Initiative": "0",
 
     "Stats": [
 
         {
             "StatName": "Сила",
             "Value": "13",
-            "Bonus": "+3",
+            "Bonus": "+1",
             "Skills": [
                 {
                     "SkillName": "Владение мечом",
@@ -26,7 +29,7 @@
         {
             "StatName": "Ловкость",
             "Value": "11",
-            "Bonus": "+1",
+            "Bonus": "+0",
             "Skills": [
                 {
                     "SkillName": "Владение мечом",
@@ -37,8 +40,8 @@
 
         {
             "StatName": "Телосложение",
-            "Value": "11",
-            "Bonus": "+1",
+            "Value": "14",
+            "Bonus": "+2",
             "Skills": [
                 {
                     "SkillName": "Владение мечом",
@@ -50,7 +53,7 @@
 
         {
             "StatName": "Интеллект",
-            "Value": "15",
+            "Value": "16",
             "Bonus": "+3",
             "Skills": [
                 {
@@ -63,8 +66,8 @@
         
         {
             "StatName": "Мудрость",
-            "Value": "11",
-            "Bonus": "+1",
+            "Value": "10",
+            "Bonus": "+0",
             "Skills": [
                 {
                     "SkillName": "Владение мечом",
@@ -76,14 +79,22 @@
         {
             "StatName": "Харизма",
             "Value": "15",
-            "Bonus": "+3",
+            "Bonus": "+2",
             "Skills": [
                 {
                     "SkillName": "Владение мечом",
                     "Bonus": "+2"
                 }
             ]
+        },
+
+        {
+            "StatName": "Пассивное восприятие",
+            "Value": "10",
+            "Bonus": "+0"
         }
+
+
 
     ],
 
