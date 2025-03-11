@@ -9,7 +9,7 @@ function AccordeonSpell(props) {
 
     return (
 
-      <div className="main_div_horizontal">
+      <div className="main_div_horizontal max_width">
         <Accordion.Root defaultValue={['Spells']} collapsible>
           {props.Spells.map((item) => (
               
@@ -28,7 +28,7 @@ function AccordeonSpell(props) {
               <Accordion.ItemContent>
                 <div className="main_div_vertical"> 
                   
-                  <span className="main_text_info color margin_left">{"Дистанция: " + item.Distance}</span>
+                  <p className="main_text_info color margin_left">{"Дистанция: " + item.Distance}</p>
                   <span className="main_text_info color margin_left">{"Школа: " + item.School}</span>
                   <span className="main_text_info color margin_left">{"Время: " + item.Time}</span>
                   <span className="main_text_info color margin_left">{"Базовый урон: " + item.BaseDamage}</span>

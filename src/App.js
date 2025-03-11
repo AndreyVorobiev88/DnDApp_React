@@ -13,13 +13,14 @@ import HP from "./Resources/HP.JPG"
 import speed from "./Resources/Speed.JPG"
 import initiative from "./Resources/Initiative.JPG"
 import perception from './Resources/PassivePerception.JPG';
-import vampire from './Resources/Vampire.JPG';
+import SpecSkillSymbol from './Resources/SpecSkillSymbol.JPG';
 
 import Panel from './Components/Panel_info';
 import PanelStat from './Components/Panel_stat';
 import data from "./Character.json"
 import Badge from "./Components/Badge";
 import AccordeonSpell from "./Components/AccordeonSpell";
+import SpecSkillPanel from "./Components/SpecSkillPanel"
 
 
 function App() {
@@ -78,10 +79,7 @@ function App() {
 
                 </div>
 
-                <div className="main_panel">
-                    <img src = {vampire} className=" main_image" alt="vampire"/>
-                    <span className='main_text_value'>Вампирские навыки</span>
-                </div>
+                <SpecSkillPanel SpecSkillSymbol={SpecSkillSymbol}></SpecSkillPanel>
 
             </div>
             <div>

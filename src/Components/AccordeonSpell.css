@@ -11,6 +11,10 @@
 
 }
 
+.max_width {
+    max-width:500px;
+}
+
 .margin_left {
 
     margin-left: 15px;
