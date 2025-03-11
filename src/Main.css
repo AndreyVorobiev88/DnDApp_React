@@ -11,6 +11,7 @@
   .main_div_horizontal {
     display: flex;
     flex-direction: row;
+    
   }
   
   .main_div_vertical{
