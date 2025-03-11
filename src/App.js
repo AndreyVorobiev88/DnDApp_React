@@ -13,6 +13,7 @@ import HP from "./Resources/HP.JPG"
 import speed from "./Resources/Speed.JPG"
 import initiative from "./Resources/Initiative.JPG"
 import perception from './Resources/PassivePerception.JPG';
+import vampire from './Resources/Vampire.JPG';
 
 import Panel from './Components/Panel_info';
 import PanelStat from './Components/Panel_stat';
@@ -77,13 +78,16 @@ function App() {
 
                 </div>
 
-                <div>
-
-                    <AccordeonSpell Spells={data.Spells} />
+                <div className="main_panel">
+                    <img src = {vampire} className=" main_image" alt="vampire"/>
+                    <span className='main_text_value'>Вампирские навыки</span>
                 </div>
 
             </div>
+            <div>
 
+                <AccordeonSpell Spells={data.Spells} />
+            </div>
             
         </div>
 
