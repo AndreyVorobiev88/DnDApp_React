@@ -4,12 +4,15 @@
     border-radius: 15px;  /* Скругление углов изображения */
     border: 15px solid #fff; /* Цвет и ширину рамки */
     -webkit-border-radius: 8px;
-    margin: 10px
+    margin: 10px;
+    background-image:url();
+    
     
   }
 
   .main_div_horizontal {
     display: flex;
+    flex-direction: row;
   }
   
   .main_div_vertical{
@@ -43,4 +46,5 @@
     font-weight: 700;
     color:rgb(4, 50, 17);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
 }

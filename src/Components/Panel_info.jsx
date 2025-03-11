@@ -12,7 +12,7 @@ function Panel (props) {
             <div className="main_div_vertical main_panel">
                 <div><span className="main_text_info">Имя: </span> <span className="main_text_value">{props.Name}</span> </div>
 
-                <div className="margin_top_15"><span className="main_main_text_info">Раса: </span> <span className="main_text_value">{props.Race}</span> </div>
+                <div className="margin_top_15"><span className="main_text_info">Раса: </span> <span className="main_text_value">{props.Race}</span> </div>
 
                 <div className="margin_top_15"><span className="main_text_info">Класс: </span> <span className="main_text_value">{props.ClassName}</span> </div>
 

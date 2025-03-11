@@ -10,17 +10,35 @@ function AccordeonSpell(props) {
     return (
 
       <div className="main_div_horizontal main_panel">
-        <Accordion.Root defaultValue={['React']} collapsible>
-          {['React', 'Solid', 'Vue'].map((item) => (
-            <Accordion.Item key={item} value={item}>
-              <Accordion.ItemTrigger>
-                {item}
-                <Accordion.ItemIndicator>
-                  <img src={DownIcon} alt=""/>
-                </Accordion.ItemIndicator>
-              </Accordion.ItemTrigger>
-              <Accordion.ItemContent>{item} is a JavaScript library for building user interfaces.</Accordion.ItemContent>
+        <Accordion.Root defaultValue={['Spells']} collapsible>
+          {props.Spells.map((item) => (
+              
+              <Accordion.Item  value={item.SpellName}>
+
+                <Accordion.ItemTrigger className="main_div_horizontal raduis">
+
+                  <img src={DownIcon} className="raduis" alt="" />
+                  <span className="main_text_value margin_15">{item.SpellName}</span>
+                  <span className="main_text_info margin_15">Уровень: {item.Level} </span>
+                  
+                  <Accordion.ItemIndicator>
+                  </Accordion.ItemIndicator>
+                </Accordion.ItemTrigger>
+
+              <Accordion.ItemContent>
+                <div className="main_div_vertical"> 
+                  
+                  <span className="main_text_info color margin_left">{"Дистанция: " + item.Distance}</span>
+                  <span className="main_text_info color margin_left">{"Школа: " + item.School}</span>
+                  <span className="main_text_info color margin_left">{"Время: " + item.Time}</span>
+                  <span className="main_text_info color margin_left">{"Базовый урон: " + item.BaseDamage}</span>
+                  <span className="main_text_info color margin_top margin_left">{item.Description}</span>
+
+                </div>
+                
+              </Accordion.ItemContent>
             </Accordion.Item>
+            
           ))}
         </Accordion.Root>
       

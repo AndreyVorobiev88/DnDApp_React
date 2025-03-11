@@ -50,8 +50,12 @@ function App() {
                     />
 
                 <div>
-                    <PanelStat Picture={strength} StatName={data.Stats[0].StatName} Value={data.Stats[0].Value}
-                    Bonus={data.Stats[0].Bonus} />
+                    <PanelStat 
+                        Picture={strength} 
+                        StatName={data.Stats[0].StatName} 
+                        Value={data.Stats[0].Value}
+                        Bonus={data.Stats[0].Bonus} 
+                    />
 
                     <PanelStat Picture={dexterity} StatName={data.Stats[1].StatName} Value={data.Stats[1].Value}
                     Bonus={data.Stats[1].Bonus} />
@@ -75,8 +79,7 @@ function App() {
 
                 <div>
 
-                    <AccordeonSpell></AccordeonSpell>
-
+                    <AccordeonSpell Spells={data.Spells} />
                 </div>
 
             </div>
