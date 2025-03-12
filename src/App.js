@@ -58,8 +58,10 @@ function App() {
                     
                     {data.Stats.map((stat) => (
 
-                        <PanelStat Stat={stat} Appearance={statImages[data.Stats.indexOf(stat)]}/>
-
+                        <PanelStat 
+                            Stat={stat} 
+                            Image={statImages[data.Stats.indexOf(stat)]}
+                        />
                     ))
                     }
 

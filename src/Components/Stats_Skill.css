@@ -1,0 +1,22 @@
+.margin_right_10 {
+
+    margin-right: 10px;
+
+}
+
+.background_not_used {
+
+    background-color: #cccccc;
+    border-radius: 2px;
+    padding: 2px;
+
+}
+
+
+.background_used {
+
+    background-color: #8ec89a;
+    border-radius: 2px;
+    padding: 2px;
+
+}

@@ -67,8 +67,29 @@
             "Appearance": "./Resources/Intelligence.JPG",
             "Skills": [
                 {
-                    "SkillName": "Владение мечом",
-                    "Bonus": "+2"
+                    "SkillName": "История",
+                    "Bonus": "+6",
+                    "Active": true
+                },
+                {
+                    "SkillName": "Природа",
+                    "Bonus": "+3",
+                    "Active": false
+                },
+                {
+                    "SkillName": "Расследования",
+                    "Bonus": "+3",
+                    "Active": false
+                },
+                {
+                    "SkillName": "Религия",
+                    "Bonus": "+3",
+                    "Active": false
+                },
+                {
+                    "SkillName": "Тайная магия",
+                    "Bonus": "+6",
+                    "Active": true
                 }
             ]
         },
@@ -104,7 +125,10 @@
             "StatName": "Пассивное восприятие",
             "Value": "10",
             "Bonus": "+0",
-            "Appearance": "./Resources/PassivePerception.JPG"
+            "Appearance": "./Resources/PassivePerception.JPG",
+            "Skills": [
+  
+            ]
         }
 
 
