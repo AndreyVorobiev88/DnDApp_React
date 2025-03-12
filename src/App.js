@@ -23,6 +23,9 @@ import AccordeonSpell from "./Components/AccordeonSpell";
 import SpecSkillPanel from "./Components/SpecSkillPanel"
 
 
+const statImages = [strength, dexterity, constitution, intelligence, wisdom, charisma, perception];
+
+
 function App() {
   return (
 
@@ -52,30 +55,14 @@ function App() {
                     />
 
                 <div>
-                    <PanelStat 
-                        Picture={strength} 
-                        StatName={data.Stats[0].StatName} 
-                        Value={data.Stats[0].Value}
-                        Bonus={data.Stats[0].Bonus} 
-                    />
+                    
+                    {data.Stats.map((stat) => (
 
-                    <PanelStat Picture={dexterity} StatName={data.Stats[1].StatName} Value={data.Stats[1].Value}
-                    Bonus={data.Stats[1].Bonus} />
+                        <PanelStat Stat={stat} Appearance={statImages[data.Stats.indexOf(stat)]}/>
 
-                    <PanelStat Picture={constitution} StatName={data.Stats[2].StatName} Value={data.Stats[2].Value}
-                    Bonus={data.Stats[2].Bonus} />
+                    ))
+                    }
 
-                    <PanelStat Picture={intelligence} StatName={data.Stats[3].StatName} Value={data.Stats[3].Value}
-                    Bonus={data.Stats[3].Bonus} />
-
-                    <PanelStat Picture={wisdom} StatName={data.Stats[4].StatName} Value={data.Stats[4].Value}
-                    Bonus={data.Stats[4].Bonus} />
-
-                    <PanelStat Picture={charisma} StatName={data.Stats[5].StatName} Value={data.Stats[5].Value}
-                    Bonus={data.Stats[5].Bonus} />
-
-                    <PanelStat Picture={perception} StatName={data.Stats[6].StatName} Value={data.Stats[6].Value}
-                     />
 
                 </div>
 
@@ -83,7 +70,6 @@ function App() {
 
             </div>
             <div>
-
                 <AccordeonSpell Spells={data.Spells} />
             </div>
             

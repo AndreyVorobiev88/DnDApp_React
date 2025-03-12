@@ -19,14 +19,17 @@
             "StatName": "Сила",
             "Value": "13",
             "Bonus": "+1",
+            "Appearance": "../Resources/Strength.jpg",
             "Skills": [
                 {
                     "SkillName": "Спасбросок",
-                    "Bonus": "+1"
+                    "Bonus": "+1",
+                    "Active": false
                 },
                 {
                     "SkillName": "Атлетика",
-                    "Bonus": "+1"
+                    "Bonus": "+1",
+                    "Active": false
                 }               
             ]
         },
@@ -34,6 +37,7 @@
             "StatName": "Ловкость",
             "Value": "11",
             "Bonus": "+0",
+            "Appearance": "./Resources/Dexterity.JPG",
             "Skills": [
                 {
                     "SkillName": "Владение мечом",
@@ -46,6 +50,7 @@
             "StatName": "Телосложение",
             "Value": "14",
             "Bonus": "+2",
+            "Appearance": "./Resources/Constitution.JPG",
             "Skills": [
                 {
                     "SkillName": "Владение мечом",
@@ -59,6 +64,7 @@
             "StatName": "Интеллект",
             "Value": "16",
             "Bonus": "+3",
+            "Appearance": "./Resources/Intelligence.JPG",
             "Skills": [
                 {
                     "SkillName": "Владение мечом",
@@ -72,6 +78,7 @@
             "StatName": "Мудрость",
             "Value": "10",
             "Bonus": "+0",
+            "Appearance": "./Resources/Wisdom.JPG",
             "Skills": [
                 {
                     "SkillName": "Владение мечом",
@@ -84,6 +91,7 @@
             "StatName": "Харизма",
             "Value": "15",
             "Bonus": "+2",
+            "Appearance": "./Resources/Charisma.JPG",
             "Skills": [
                 {
                     "SkillName": "Владение мечом",
@@ -95,7 +103,8 @@
         {
             "StatName": "Пассивное восприятие",
             "Value": "10",
-            "Bonus": "+0"
+            "Bonus": "+0",
+            "Appearance": "./Resources/PassivePerception.JPG"
         }
 
 
