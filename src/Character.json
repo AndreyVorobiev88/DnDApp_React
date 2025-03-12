@@ -21,9 +21,13 @@
             "Bonus": "+1",
             "Skills": [
                 {
-                    "SkillName": "Владение мечом",
-                    "Bonus": "+2"
-                }
+                    "SkillName": "Спасбросок",
+                    "Bonus": "+1"
+                },
+                {
+                    "SkillName": "Атлетика",
+                    "Bonus": "+1"
+                }               
             ]
         },
         {
