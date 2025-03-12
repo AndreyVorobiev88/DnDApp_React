@@ -5,6 +5,7 @@
     border: 15px solid #fff; /* Цвет и ширину рамки */
     -webkit-border-radius: 8px;
     margin: 10px;
+    background-color: white;
 
   }
 
@@ -57,4 +58,12 @@
     width: 50px;
     border-radius: 50%;
 
+}
+
+.main_max_width {
+  max-width:500px;
+}
+
+main_background {
+  background-color: gray;
 }

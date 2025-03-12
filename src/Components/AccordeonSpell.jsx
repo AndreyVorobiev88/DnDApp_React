@@ -9,7 +9,7 @@ function AccordeonSpell(props) {
 
     return (
 
-      <div className="main_div_horizontal max_width">
+      <div className="main_div_horizontal main_max_width">
         <Accordion.Root defaultValue={['Spells']} collapsible>
           {props.Spells.map((item) => (
               

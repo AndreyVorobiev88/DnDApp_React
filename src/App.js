@@ -13,15 +13,16 @@ import HP from "./Resources/HP.JPG"
 import speed from "./Resources/Speed.JPG"
 import initiative from "./Resources/Initiative.JPG"
 import perception from './Resources/PassivePerception.JPG';
-import SpecSkillSymbol from './Resources/SpecSkillSymbol.JPG';
+import RaceSkillSymbol from './Resources/RaceSkillSymbol.JPG';
+import ClassSkillSymbol from "./Resources/ClassSkillSymbol.JPG";
+import FeatureSymbol from "./Resources/FeatureSymbol.JPG"
 
 import Panel from './Components/Panel_info';
 import PanelStat from './Components/Panel_stat';
 import data from "./Character.json"
 import Badge from "./Components/Badge";
 import AccordeonSpell from "./Components/AccordeonSpell";
-import SpecSkillPanel from "./Components/SpecSkillPanel"
-
+import SpecSkillPanel from "./Components/SpecSkillPanel";
 
 const statImages = [strength, dexterity, constitution, intelligence, wisdom, charisma, perception];
 
@@ -29,7 +30,7 @@ const statImages = [strength, dexterity, constitution, intelligence, wisdom, cha
 function App() {
   return (
 
-        <div>
+        <div className='main_background '>
             <div id="main" className="main_div_horizontal">
 
                 <div ClassName="main_div_vertical main_panel">
@@ -59,6 +60,7 @@ function App() {
                     {data.Stats.map((stat) => (
 
                         <PanelStat 
+                            key={stat.StatName}
                             Stat={stat} 
                             Image={statImages[data.Stats.indexOf(stat)]}
                         />
@@ -68,7 +70,13 @@ function App() {
 
                 </div>
 
-                <SpecSkillPanel SpecSkillSymbol={SpecSkillSymbol}></SpecSkillPanel>
+                <div className='main_div_vertical'>
+
+                    <SpecSkillPanel SpecSkillSymbol={RaceSkillSymbol} SpecSkills={data.RaceSkills}/>
+                    <SpecSkillPanel SpecSkillSymbol={ClassSkillSymbol} SpecSkills={data.ClassSkills}/>
+                    <SpecSkillPanel SpecSkillSymbol={FeatureSymbol} SpecSkills={data.Features}/>
+
+                </div>
 
             </div>
             <div>
