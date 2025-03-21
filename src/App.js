@@ -16,6 +16,8 @@ import perception from './Resources/PassivePerception.JPG';
 import RaceSkillSymbol from './Resources/RaceSkillSymbol.JPG';
 import ClassSkillSymbol from "./Resources/ClassSkillSymbol.JPG";
 import FeatureSymbol from "./Resources/FeatureSymbol.JPG"
+import Bag from "./Resources/Bag.jpg"
+import Scroll from "./Resources/Scroll.jpg"
 
 import Panel from './Components/Panel_info';
 import PanelStat from './Components/Panel_stat';
@@ -23,6 +25,7 @@ import data from "./Character.json"
 import Badge from "./Components/Badge";
 import AccordeonSpell from "./Components/AccordeonSpell";
 import SpecSkillPanel from "./Components/SpecSkillPanel";
+import TextArea from "./Components/TextArea.jsx"
 
 const statImages = [strength, dexterity, constitution, intelligence, wisdom, charisma, perception];
 
@@ -79,8 +82,11 @@ function App() {
                 </div>
 
             </div>
-            <div>
+            <div className='main_div_horizontal'>
                 <AccordeonSpell Spells={data.Spells} />
+
+                <TextArea Picture={Bag} Caption={"Инвентарь"} Value={data.Inventory}></TextArea>
+                <TextArea Picture={Scroll} Caption={"Журнал"}></TextArea>
             </div>
             
         </div>

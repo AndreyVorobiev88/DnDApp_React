@@ -7,7 +7,7 @@ function SpecSkillPanel(props) {
     return (
 
         <div className="main_panel main_max_width">
-            <div className="main_div_horizontal justify">
+            <div className="main_div_horizontal main_justify">
                 <img src = {props.SpecSkillSymbol} className=" main_image" alt="spec"/>
                 <span className='main_text_value color_red'>{props.SpecSkills.Title}</span>
             </div>

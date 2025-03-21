@@ -1,17 +1,8 @@
 .margin {
-    margin: 5px;
+    margin: 10px !important;
 }
 
 .color_red {
 
     color: darkred;
-}
-
-.justify {
-
-    justify-content: flex-start;
-    align-items:center;
-    align-content:center;
-    margin: 5px;
-
 }

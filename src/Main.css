@@ -67,3 +67,17 @@
 main_background {
   background-color: gray;
 }
+
+.main_margin {
+
+  margin: 10px;
+}
+
+.main_justify {
+
+  justify-content: flex-start;
+  align-items:center;
+  align-content:center;
+  margin: 5px;
+
+}
