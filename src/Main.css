@@ -1,32 +1,42 @@
 .main_panel {
-    box-shadow: 2px 1px 5px #999999; /* Цвет и размер тени */
-    -webkit-box-shadow: 0 0 5px #999;
-    border-radius: 15px;  /* Скругление углов изображения */
-    border: 15px solid #fff; /* Цвет и ширину рамки */
-    -webkit-border-radius: 8px;
-    margin: 10px;
-    background-color: white;
 
+    border-radius: 15px;  /* Скругление углов изображения */
+    
   }
+
+.main_panel_size {
+
+  max-width: 1700px;
+  max-height: 864px;
+  gap: 40px;
+
+}
 
   .main_div_horizontal {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     
   }
   
   .main_div_vertical{
     display: flex;
     flex-direction: column;
-  
+
+  }
+
+  .main_space_between {
+
+    justify-content:space-between;
   }
 
   .main_text_info
 {
-    font-weight: 550;
-    font-style:italic;
-    color: lightslategrey;  
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #759E7A;  
+    font-family: 'Times New Roman', Times, serif;
 
 }
 
@@ -43,41 +53,49 @@
 .main_text_value
 {
     font-style:italic;
-    font-weight: 700;
-    color:rgb(4, 50, 17);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: larger;
+    font-weight: 400;
+    color:#FFFFFF;
+    font-size: 18px;
 }
 
-.main_image {
+.main_portrait_image {
 
-    border: 2px solid #fff; /* Цвет и ширину рамки */
-    box-shadow: 2px 1px 2px #999999; /* Цвет и размер тени */
-    margin: 5px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 342px;
+  height: fit-content;
 
 }
 
-.main_max_width {
-  max-width:500px;
+.dice_image {
+
+  width: 227px;
+  height: 250px;
+  border-radius: 15px;
 }
 
-main_background {
-  background-color: gray;
+.main_background {
+  background-color: #0C2C1D;
+}
+
+.secondary_background {
+
+  background-color: #ffffff;
+}
+
+.main_padding {
+  padding: 28px;
 }
 
 .main_margin {
 
-  margin: 10px;
+  margin: 28px;
 }
 
-.main_justify {
+.main_divider {
 
-  justify-content: flex-start;
-  align-items:center;
-  align-content:center;
-  margin: 5px;
+    border-right: 2px solid #FFFFFF33;
+    height: fit-content;
+    width: 1px;
 
 }

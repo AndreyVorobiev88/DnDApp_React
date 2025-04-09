@@ -1,6 +1,11 @@
-.margin_top_15 {
+.panel_info_content {
 
-    margin-top: 15px;
+    padding: 28px;
+    gap: 10px;
+    align-content: space-between;
+    min-width: 200px;
+    width: fit-content;
+    height: fit-content;
 
 }
 

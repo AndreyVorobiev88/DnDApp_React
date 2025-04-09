@@ -2,6 +2,7 @@ import './App.css';
 import './Main.css';
 
 import Portrait from "./Resources/Portrait.JPG"
+import Dice20 from "./Resources/Dice20.JPG"
 import strength from "./Resources/Strength.jpg"
 import dexterity from "./Resources/Dexterity.JPG"
 import constitution from "./Resources/Constitution.JPG"
@@ -26,6 +27,7 @@ import Badge from "./Components/Badge";
 import AccordeonSpell from "./Components/AccordeonSpell";
 import SpecSkillPanel from "./Components/SpecSkillPanel";
 import TextArea from "./Components/TextArea.jsx"
+import Divider from './Components/Divider.jsx';
 
 const statImages = [strength, dexterity, constitution, intelligence, wisdom, charisma, perception];
 
@@ -33,64 +35,45 @@ const statImages = [strength, dexterity, constitution, intelligence, wisdom, cha
 function App() {
   return (
 
-        <div className='main_background '>
-            <div id="main" className="main_div_horizontal">
+        <div className='main_padding '>
 
-                <div ClassName="main_div_vertical main_panel">
-                    <img src = {Portrait} className={"main_panel"} alt = "portrait"></img>
-                    <div className='main_div_horizontal'>
-                        <Badge Picture={KD} Value={data.KD}></Badge>
-                        <Badge Picture={HP} Value={data.HP + "/" + data.HP}></Badge>
-                        <Badge Picture={speed} Value={data.Speed}></Badge>
-                        <Badge Picture={initiative} Value={data.Initiative}></Badge>
+            <div className='main_div_vertical'>
+
+                <div className='main_div_horizontal main_panel main_panel_size main_background'>
+
+                    <div className='main_panel'>
+                        <img src = {Portrait} className='main_portrait_image' alt='Portrait'></img>
                     </div>
 
-                </div>
                     <Panel 
-                        Name={data.Name} 
                         Race={data.Race} 
                         ClassName={data.ClassName} 
                         SubClass={data.SubClass} 
                         Outlook={data.Outlook} 
-                        Level={data.Level} 
                         SkillLevel={data.SkillLevel}
-                        Size={data.Size}
-                        
+                        Size={data.Size}    
                     />
 
-                <div>
+                    <div className='main_div_horizontal main_padding'>
                     
-                    {data.Stats.map((stat) => (
+                        <img src = {Dice20} className='dice_image' alt='Dice'></img>
+                    </div>
 
-                        <PanelStat 
-                            key={stat.StatName}
-                            Stat={stat} 
-                            Image={statImages[data.Stats.indexOf(stat)]}
-                        />
-                    ))
-                    }
+                    <div className='main_div_horizontal main_space_between secondary_background main_panel'>
 
+                        <Badge Picture={KD} Value={data.KD}></Badge>
+                        <Badge Picture={HP} Value={data.HP + "/" + data.HP}></Badge>
+                        <Badge Picture={speed} Value={data.Speed}></Badge>
+                        <Badge Picture={initiative} Value={data.Initiative}></Badge>
 
+                    </div>
+                
                 </div>
-
-                <div className='main_div_vertical'>
-
-                    <SpecSkillPanel SpecSkillSymbol={RaceSkillSymbol} SpecSkills={data.RaceSkills}/>
-                    <SpecSkillPanel SpecSkillSymbol={ClassSkillSymbol} SpecSkills={data.ClassSkills}/>
-                    <SpecSkillPanel SpecSkillSymbol={FeatureSymbol} SpecSkills={data.Features}/>
-
-                </div>
-
-            </div>
-            <div className='main_div_horizontal'>
-                <AccordeonSpell Spells={data.Spells} />
-
-                <TextArea Picture={Bag} Caption={"Инвентарь"} Value={data.Inventory}></TextArea>
-                <TextArea Picture={Scroll} Caption={"Журнал"}></TextArea>
-            </div>
             
-        </div>
+            
+            </div>
 
+        </div>
         
     )
 }

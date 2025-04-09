@@ -1,14 +1,11 @@
 .image_badge {
 
-    border: 2px solid #fff; /* Цвет и ширину рамки */
-    box-shadow: 2px 1px 2px #999999; /* Цвет и размер тени */
     border-radius: 50%;
     filter:grayscale(20%);
 }
 
 .align_center{
 
-  margin: 5px;
   justify-content:center;
   align-items: center;
 
@@ -16,6 +13,8 @@
 
 .text_larger {
   font-size: larger;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 
