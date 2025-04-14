@@ -28,6 +28,7 @@ import AccordeonSpell from "./Components/AccordeonSpell";
 import SpecSkillPanel from "./Components/SpecSkillPanel";
 import TextArea from "./Components/TextArea.jsx"
 import Divider from './Components/Divider.jsx';
+import TabsList from './Components/TabsList.jsx'
 
 const statImages = [strength, dexterity, constitution, intelligence, wisdom, charisma, perception];
 
@@ -41,8 +42,11 @@ function App() {
 
                 <div className='main_div_horizontal main_panel main_panel_size main_background'>
 
-                    <div className='main_panel'>
-                        <img src = {Portrait} className='main_portrait_image' alt='Portrait'></img>
+                    <div>
+                        <img src={Portrait} className='main_portrait_image' alt='Portrait'/> 
+                        <span className='portrait_text_above_image main_text_value'>{data.Name}</span>
+                        <span className='level_text_above_image main_text_value'>{data.Level} ур.</span>
+
                     </div>
 
                     <Panel 
@@ -69,7 +73,11 @@ function App() {
                     </div>
                 
                 </div>
-            
+
+
+                <TabsList/>
+
+                            
             
             </div>
 

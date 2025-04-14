@@ -48,6 +48,7 @@
     font-size:x-large;
     margin-left: 15px;
     text-align:right;
+    font-family: Inter;
 }
 
 .main_text_value
@@ -56,6 +57,7 @@
     font-weight: 400;
     color:#FFFFFF;
     font-size: 18px;
+    font-family: Inter;
 }
 
 .main_portrait_image {
@@ -64,6 +66,35 @@
   border-bottom-left-radius: 15px;
   width: 342px;
   height: fit-content;
+  font-family: Inter;
+
+}
+
+.portrait_text_above_image {
+
+  
+    font-family: Inter;
+    position: absolute;
+    top: 330px;
+    left: 140px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 28px;
+
+
+}
+
+.level_text_above_image {
+
+  
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 100%;
+  font-weight: 800;
+  font-size: 16px;
+  font-family: Inter;
+
 
 }
 
@@ -92,6 +123,10 @@
   margin: 28px;
 }
 
+.main_margin_top {
+
+  margin-top: 28px;
+}
 .main_divider {
 
     border-right: 2px solid #FFFFFF33;

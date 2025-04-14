@@ -29,6 +29,17 @@
   color: #61dafb;
 }
 
+.portrait_image {
+
+  background-image: url('./Resources/Portrait.JPG'); 
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 342px;
+  height: fit-content;
+  flex-grow: 1;
+
+}
+
 
 @keyframes App-logo-spin {
   from {
