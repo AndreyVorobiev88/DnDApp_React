@@ -27,3 +27,17 @@
 .color {
     color: #171817; ;
 }
+
+.size_item_trigger {
+    width: 380px;
+}
+
+.div_item_trigger {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+}

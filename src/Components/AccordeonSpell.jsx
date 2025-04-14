@@ -15,12 +15,15 @@ function AccordeonSpell(props) {
               
               <Accordion.Item  value={item.SpellName}>
 
-                <Accordion.ItemTrigger className="main_div_horizontal raduis">
+                <Accordion.ItemTrigger className="main_div_horizontal raduis size_item_trigger">
 
                   <img src={DownIcon} className="raduis" alt="" />
-                  <span className="main_text_value margin_15">{item.SpellName}</span>
-                  <span className="main_text_info margin_15">Уровень: {item.Level} </span>
-                  
+
+                  <div className="div_item_trigger size_item_trigger">
+                    <span className="main_text_value color">{item.SpellName}</span>
+                    <span className="main_text_info">Уровень: {item.Level} </span>
+                  </div>
+
                   <Accordion.ItemIndicator>
                   </Accordion.ItemIndicator>
                 </Accordion.ItemTrigger>
@@ -28,7 +31,7 @@ function AccordeonSpell(props) {
               <Accordion.ItemContent>
                 <div className="main_div_vertical"> 
                   
-                  <p className="main_text_info color margin_left">{"Дистанция: " + item.Distance}</p>
+                  <span className="main_text_info color margin_left">{"Дистанция: " + item.Distance}</span>
                   <span className="main_text_info color margin_left">{"Школа: " + item.School}</span>
                   <span className="main_text_info color margin_left">{"Время: " + item.Time}</span>
                   <span className="main_text_info color margin_left">{"Базовый урон: " + item.BaseDamage}</span>

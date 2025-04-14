@@ -6,17 +6,17 @@ function SpecSkillPanel(props) {
 
     return (
 
-        <div className="main_panel main_max_width">
-            <div className="main_div_horizontal main_justify">
-                <img src = {props.SpecSkillSymbol} className=" main_image" alt="spec"/>
-                <span className='stat_text'>{props.SpecSkills.Title}</span>
+        <div className="spec_skill_panel margin_left_10">
+            <div className="main_div_horizontal">
+                <img src = {props.SpecSkillSymbol} className=" image_spec_skill" alt="spec"/>
+                <span className=' margin_left_10 spec_skill_title'>{props.SpecSkills.Title}</span>
             </div>
 
             <div className="main_div_vertical">
                 {
                     props.SpecSkills.Items.map((skill) => (
 
-                        <span className='margin stat_text'>{skill}</span>
+                        <span className='margin_top_30 stat_text background_spec_skill'>{skill}</span>
 
                     ))
 

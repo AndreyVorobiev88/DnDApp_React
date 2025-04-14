@@ -1,11 +1,27 @@
-.margin {
-    margin: 10px !important;
+.margin_left_10 {
+    margin-left: 10px 
 }
 
-.color_red {
-
-    color: darkred;
+.margin_top_30 {
+    margin-top: 30px 
 }
+
+.spec_skill_panel {
+
+    width: 355px;
+    height: fit-content;
+    gap: 16px;
+    border-radius: 15px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    border-width: 2px;
+    border: 2px solid #0C2C1D
+
+}
+
+
 
 .stat_text {
 
@@ -15,7 +31,30 @@
     font-size: 18px;
     line-height: 100%;
     letter-spacing: 0%;
-    text-align: center;
+    text-align: left;
+
+}
+
+.image_spec_skill {
+
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+.spec_skill_title {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+.background_spec_skill {
+
+    background: #759E7A33;
+    border-radius: 15px;
     
 
 }

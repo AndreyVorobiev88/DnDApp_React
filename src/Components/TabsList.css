@@ -18,5 +18,12 @@
     border: 2px solid #0C2C1D;
     border-radius: 15px;
 
+}
 
+.align_top {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
 }

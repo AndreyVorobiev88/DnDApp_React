@@ -9,10 +9,15 @@ import intelligence from "../Resources/Intelligence.JPG"
 import wisdom from "../Resources/Wisdom.JPG"
 import charisma from "../Resources/Charisma.JPG"
 import perception from '../Resources/PassivePerception.JPG';
+import RaceSkillSymbol from '../Resources/RaceSkillSymbol.JPG';
+import ClassSkillSymbol from "../Resources/ClassSkillSymbol.JPG";
+import FeatureSymbol from "../Resources/FeatureSymbol.JPG"
 
 import data from "../Character.json"
 
 import PanelStat from './Panel_stat';
+import SpecSkillPanel from "./SpecSkillPanel";
+import AccordeonSpell from "./AccordeonSpell";
 
 
 const statImages = [strength, dexterity, constitution, intelligence, wisdom, charisma, perception];
@@ -32,25 +37,31 @@ function TabsList(props) {
 
                 </TabList>
 
-                <TabPanel className={"border_tab_stats"}>
-                    {data.Stats.map((stat) => (
+                <TabPanel>
+                    <div  className={"border_tab_stats"}>
+                        {data.Stats.map((stat) => (
 
-                    <PanelStat 
-                        key={stat.StatName}
-                        Stat={stat} 
-                        Image={statImages[data.Stats.indexOf(stat)]}
-                    />
-                    ))
-                    }
+                        <PanelStat 
+                            key={stat.StatName}
+                            Stat={stat} 
+                            Image={statImages[data.Stats.indexOf(stat)]}
+                        />
+                        ))
+                        }
+                    </div>
                 </TabPanel>
 
                 <TabPanel>
-                    <h2>Any content 2</h2>
+                    <div className={"align_top"}>
+                        <SpecSkillPanel SpecSkillSymbol={RaceSkillSymbol} SpecSkills={data.RaceSkills}/>
+                        <SpecSkillPanel SpecSkillSymbol={ClassSkillSymbol} SpecSkills={data.ClassSkills}/>
+                        <SpecSkillPanel SpecSkillSymbol={FeatureSymbol} SpecSkills={data.Features}/>
+                    </div>
                 </TabPanel>
 
     
                 <TabPanel>
-                    <h2>Any content 3</h2>
+                    <AccordeonSpell Spells={data.Spells} />
                 </TabPanel>            
 
             </Tabs>

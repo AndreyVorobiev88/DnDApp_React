@@ -8,18 +8,12 @@ import KD from "./Resources/KD.JPG"
 import HP from "./Resources/HP.JPG"
 import speed from "./Resources/Speed.JPG"
 import initiative from "./Resources/Initiative.JPG"
-import RaceSkillSymbol from './Resources/RaceSkillSymbol.JPG';
-import ClassSkillSymbol from "./Resources/ClassSkillSymbol.JPG";
-import FeatureSymbol from "./Resources/FeatureSymbol.JPG"
 import Bag from "./Resources/Bag.jpg"
 import Scroll from "./Resources/Scroll.jpg"
 
 import Panel from './Components/Panel_info';
-import PanelStat from './Components/Panel_stat';
 import data from "./Character.json"
 import Badge from "./Components/Badge";
-import AccordeonSpell from "./Components/AccordeonSpell";
-import SpecSkillPanel from "./Components/SpecSkillPanel";
 import TextArea from "./Components/TextArea.jsx"
 import Divider from './Components/Divider.jsx';
 import TabsList from './Components/TabsList.jsx'
