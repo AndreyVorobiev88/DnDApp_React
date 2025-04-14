@@ -2,6 +2,21 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './TabsList.css'
 
+import strength from "../Resources/Strength.jpg"
+import dexterity from "../Resources/Dexterity.JPG"
+import constitution from "../Resources/Constitution.JPG"
+import intelligence from "../Resources/Intelligence.JPG"
+import wisdom from "../Resources/Wisdom.JPG"
+import charisma from "../Resources/Charisma.JPG"
+import perception from '../Resources/PassivePerception.JPG';
+
+import data from "../Character.json"
+
+import PanelStat from './Panel_stat';
+
+
+const statImages = [strength, dexterity, constitution, intelligence, wisdom, charisma, perception];
+
 function TabsList(props) {
 
     return (
@@ -17,8 +32,16 @@ function TabsList(props) {
 
                 </TabList>
 
-                <TabPanel>
-                    <h2> KURWA BOBER</h2>
+                <TabPanel className={"border_tab_stats"}>
+                    {data.Stats.map((stat) => (
+
+                    <PanelStat 
+                        key={stat.StatName}
+                        Stat={stat} 
+                        Image={statImages[data.Stats.indexOf(stat)]}
+                    />
+                    ))
+                    }
                 </TabPanel>
 
                 <TabPanel>

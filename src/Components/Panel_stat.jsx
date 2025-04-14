@@ -9,38 +9,42 @@ function Panel_stat (props) {
   
       return (
      
-            <div className="main_panel">
-                  <div className="div_stat">
+            <div className="div_stat">
 
-                        <img src={props.Image} className={"main_panel image_stat"} alt = ""/>
 
-                        <span className={"main_text_info text_stat_info"}>
+                  <div className="size_title_box div_stat">
+                        
+                        <img src={props.Image} className={"image_stat"} alt = ""/>
+
+                        <span className={"stat_text"}>
                               {props.Stat.StatName}:
                         </span> 
+                  </div>
 
-                        <span className={"main_text_value text_stat_value"}>
+                  <div className="size_value_box div_stat">
+
+                        <span className={"stat_text"}>
                               {props.Stat.Value}
                         </span> 
 
-                        <span className={"main_text_bonus"} >
+                        <span className={"bonus_text"} >
                               {props.Stat.Bonus}
                         </span> 
-
-                  </div>   
-                  <div className="main_div_horizontal">
-                        {
-                              ((props.Stat.Skills) && (props.Stat.Skills.length > 0)) ?
-                                    props.Stat.Skills.map((skill) => (
-
-                                          <StatsSkill 
-                                                key={skill.StatName}
-                                                StatSkill={skill}
-                                          />
-                                    ))
-                              : <></>
-                              
-                        }
                   </div>
+
+                  {
+                        ((props.Stat.Skills) && (props.Stat.Skills.length > 0)) ?
+                              props.Stat.Skills.map((skill) => (
+
+                                    <StatsSkill 
+                                          key={skill.StatName}
+                                          StatSkill={skill}
+                                    />
+                              ))
+                        : <></>
+                        
+                  }
+
             </div>       
       )
 }

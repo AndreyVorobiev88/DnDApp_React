@@ -7,17 +7,31 @@ function StatsSkill(props) {
 
     return (
 
-        <div className="margin_right_10"> 
+        <div className="margin_right_10 "> 
 
-            {(props.StatSkill.Active) ?
+            {(props.StatSkill.Active) ? (
 
-                <span className="background_used">
-                    {props.StatSkill.SkillName + ": " + props.StatSkill.Bonus}
-                </span>
+                
+                <div className="padding_10 background_used">
+                    <span className="text_used">
+                        {props.StatSkill.SkillName + ": "}
+                    </span>
+                    <span className="bonus_used">
+                        {props.StatSkill.Bonus}
+                    </span>
+                </div>
+            )
 
-                :<span className="background_not_used">
-                    {props.StatSkill.SkillName + ": " + props.StatSkill.Bonus}
-                </span>
+                :
+                <div className="padding_10 background_not_used">
+                    <span className="text_not_used">
+                        {props.StatSkill.SkillName + ": "}
+                    </span>
+                    <span className="bonus_not_used">
+                        {props.StatSkill.Bonus}
+                    </span>
+                </div>               
+                
             }
             
         </div>

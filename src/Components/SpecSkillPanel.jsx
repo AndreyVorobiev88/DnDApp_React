@@ -9,14 +9,14 @@ function SpecSkillPanel(props) {
         <div className="main_panel main_max_width">
             <div className="main_div_horizontal main_justify">
                 <img src = {props.SpecSkillSymbol} className=" main_image" alt="spec"/>
-                <span className='main_text_value color_red'>{props.SpecSkills.Title}</span>
+                <span className='stat_text'>{props.SpecSkills.Title}</span>
             </div>
 
             <div className="main_div_vertical">
                 {
                     props.SpecSkills.Items.map((skill) => (
 
-                        <span className='margin'>{skill}</span>
+                        <span className='margin stat_text'>{skill}</span>
 
                     ))
 

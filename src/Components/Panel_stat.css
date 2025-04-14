@@ -1,28 +1,11 @@
 .div_stat {
-    padding-left: 10px;
+
     padding-right: 10px;
     display: flex;
-    justify-content: flex-start;
+    align-items:flex-start;
     align-items:center;
 }
 
-
-.text_align{
-    text-align:left;
-  }
-
-
-.text_stat_info
-{
-    font-size: larger;
-
-}
-
-.text_stat_value
-{
-    font-size: larger;
-    margin-left: 5px;
-}
 
 .image_stat {
     border: 2px solid #fff; /* Цвет и ширину рамки */
@@ -33,3 +16,50 @@
     border-radius: 50%;
     filter: hue-rotate(90deg);
   }
+
+
+  .size_title_box {
+
+    width: 280px;
+    height: 60px;
+    max-width: 300px;
+    gap: 12px;
+
+  }
+
+  .size_value_box {
+
+    width: 100px;
+    max-width: 140px;
+    gap: 6px;
+
+
+  }
+
+
+
+
+ .stat_text {
+
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    
+
+ }
+
+ .bonus_text {
+
+    font-family: Inter;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #1C492B;
+    
+ }

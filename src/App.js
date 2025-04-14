@@ -3,17 +3,11 @@ import './Main.css';
 
 import Portrait from "./Resources/Portrait.JPG"
 import Dice20 from "./Resources/Dice20.JPG"
-import strength from "./Resources/Strength.jpg"
-import dexterity from "./Resources/Dexterity.JPG"
-import constitution from "./Resources/Constitution.JPG"
-import intelligence from "./Resources/Intelligence.JPG"
-import wisdom from "./Resources/Wisdom.JPG"
-import charisma from "./Resources/Charisma.JPG"
+
 import KD from "./Resources/KD.JPG"
 import HP from "./Resources/HP.JPG"
 import speed from "./Resources/Speed.JPG"
 import initiative from "./Resources/Initiative.JPG"
-import perception from './Resources/PassivePerception.JPG';
 import RaceSkillSymbol from './Resources/RaceSkillSymbol.JPG';
 import ClassSkillSymbol from "./Resources/ClassSkillSymbol.JPG";
 import FeatureSymbol from "./Resources/FeatureSymbol.JPG"
@@ -29,8 +23,6 @@ import SpecSkillPanel from "./Components/SpecSkillPanel";
 import TextArea from "./Components/TextArea.jsx"
 import Divider from './Components/Divider.jsx';
 import TabsList from './Components/TabsList.jsx'
-
-const statImages = [strength, dexterity, constitution, intelligence, wisdom, charisma, perception];
 
 
 function App() {
