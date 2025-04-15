@@ -5,11 +5,11 @@ import StatsSkill from "./Stats_Skill";
 
 function Panel_stat (props) {
   
-      console.log(props)
+      
   
       return (
      
-            <div className="div_stat">
+            <div className={props.isColored ? ' div_stat background_green' : 'div_stat background_white'} >
 
 
                   <div className="size_title_box div_stat">

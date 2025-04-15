@@ -39,12 +39,15 @@ function TabsList(props) {
 
                 <TabPanel>
                     <div  className={"border_tab_stats"}>
-                        {data.Stats.map((stat) => (
+                        {
+
+                        data.Stats.map((stat, index) => (
 
                         <PanelStat 
                             key={stat.StatName}
                             Stat={stat} 
                             Image={statImages[data.Stats.indexOf(stat)]}
+                            isColored={index % 2 === 0}
                         />
                         ))
                         }

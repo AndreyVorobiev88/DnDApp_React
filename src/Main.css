@@ -6,8 +6,17 @@
 
 .main_panel_size {
 
-  max-width: 1700px;
+  max-width: 1630px;
   max-height: 864px;
+  gap: 20px;
+
+}
+
+.secondary_panel_size {
+
+  width: 360px;
+  height: 800px;
+  padding: 28px;
   gap: 40px;
 
 }
@@ -76,7 +85,7 @@
     font-family: Inter;
     position: absolute;
     top: 330px;
-    left: 140px;
+    left: 150px;
     width: 100%;
     font-weight: 700;
     font-size: 28px;

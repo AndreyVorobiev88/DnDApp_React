@@ -22,9 +22,9 @@ import TabsList from './Components/TabsList.jsx'
 function App() {
   return (
 
-        <div className='main_padding '>
+        <div className='main_padding ain_div_horizontal'>
 
-            <div className='main_div_vertical'>
+            <div className='main_div_vertical '>
 
                 <div className='main_div_horizontal main_panel main_panel_size main_background'>
 
@@ -47,6 +47,7 @@ function App() {
                     <div className='main_div_horizontal main_padding'>
                     
                         <img src = {Dice20} className='dice_image' alt='Dice'></img>
+
                     </div>
 
                     <div className='main_div_horizontal main_space_between secondary_background main_panel'>
@@ -66,6 +67,8 @@ function App() {
                             
             
             </div>
+
+
 
         </div>
         

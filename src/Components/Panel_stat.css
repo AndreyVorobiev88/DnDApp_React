@@ -37,8 +37,6 @@
   }
 
 
-
-
  .stat_text {
 
     font-family: Inter;
@@ -62,4 +60,16 @@
     text-align: center;
     color: #1C492B;
     
+ }
+
+ .background_white {
+
+   background-color: white;
+
+ }
+
+ .background_green {
+
+    background-color: #0C2C1D0D;
+  
  }
