@@ -3,26 +3,23 @@ import './Main.css';
 
 import Portrait from "./Resources/Portrait.JPG"
 import Dice20 from "./Resources/Dice20.JPG"
-
 import KD from "./Resources/KD.JPG"
 import HP from "./Resources/HP.JPG"
 import speed from "./Resources/Speed.JPG"
 import initiative from "./Resources/Initiative.JPG"
-import Bag from "./Resources/Bag.jpg"
-import Scroll from "./Resources/Scroll.jpg"
 
 import Panel from './Components/Panel_info';
 import data from "./Character.json"
 import Badge from "./Components/Badge";
-import TextArea from "./Components/TextArea.jsx"
-import Divider from './Components/Divider.jsx';
 import TabsList from './Components/TabsList.jsx'
+import InventoryPanel from './Components/InventoryPanel.jsx';
 
 
 function App() {
   return (
 
-        <div className='main_padding ain_div_horizontal'>
+    <div className='main_div_horizontal_simple '>
+        <div className='main_padding'>
 
             <div className='main_div_vertical '>
 
@@ -67,6 +64,9 @@ function App() {
                             
             
             </div>
+            </div>
+
+            <InventoryPanel></InventoryPanel>
 
 
 

@@ -1,0 +1,22 @@
+.inventory_panel_size {
+
+    width: 360px;
+    height: 800px;
+    padding: 28px;
+    gap: 30px;
+  
+  }
+  
+  
+.image_size {
+
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.margin_20 {
+
+    margin-right: 20px;
+
+}
