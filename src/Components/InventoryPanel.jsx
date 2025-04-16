@@ -20,7 +20,7 @@ function InventoryPanel(props) {
             <div className="main_div_horizontal ">
 
                 <img className="image_size margin_20" src={Bag} alt="Bag"></img>
-                <img className="image_size margin_20" src={Scroll} alt="Scroll"></img>
+                <img className="image_size margin_20 inactive_picture" src={Scroll} alt="Scroll"></img>
 
             </div>
 
@@ -28,8 +28,8 @@ function InventoryPanel(props) {
 
                 {
                     data.Inventory?.map((item, i) => (
-                        <div key={i}>
-                            <span>{item}</span>
+                        <div key={i} className="text_background">
+                            <span className="main_text_value">{item}</span>
                         </div>
                     ))
                 }

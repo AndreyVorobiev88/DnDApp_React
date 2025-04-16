@@ -1,7 +1,7 @@
 .inventory_panel_size {
 
     width: 360px;
-    height: 800px;
+    height: 785px;
     padding: 28px;
     gap: 30px;
   
@@ -19,4 +19,20 @@
 
     margin-right: 20px;
 
+}
+
+
+.text_background {
+
+    background-color: #FFFFFF1F;
+    border-radius: 15px;
+    padding:2px;
+    margin: 5px;
+    width: fit-content;
+
+}
+
+.inactive_picture {
+
+    opacity: 30%;
 }
