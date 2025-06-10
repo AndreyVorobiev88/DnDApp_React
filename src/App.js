@@ -130,13 +130,13 @@ function App() {
                             
             
             </div>
-            </div>
-
-            <InventoryPanel></InventoryPanel>
-
-
-
         </div>
+
+        <InventoryPanel></InventoryPanel>
+
+
+
+    </div>
         
     )
 }
