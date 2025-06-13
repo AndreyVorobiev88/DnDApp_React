@@ -2,9 +2,12 @@
 import React from "react";
 import './Panel_stat.css';
 import StatsSkill from "./Stats_Skill";
+import EditableField from "./EditableField";
 
 function Panel_stat (props) {
   
+      
+
       
   
       return (
@@ -24,7 +27,17 @@ function Panel_stat (props) {
                   <div className="size_value_box div_stat">
 
                         <span className={"stat_text"}>
-                              {props.Stat.Value}
+                              {/*{props.Stat.Value}*/
+                              
+                                    <EditableField 
+                                          value={props.Stat.Value}
+                                          onValueChange={(newValue) => {props.onStatChange(props.Stat.StatName, newValue)}}
+                                          />
+                              
+                              
+                              
+                              }
+
                         </span> 
 
                         <span className={"bonus_text"} >

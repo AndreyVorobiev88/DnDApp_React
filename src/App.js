@@ -33,11 +33,7 @@ function App() {
         }
     }, []);
 
-    const handleValueChange = async (fieldName, newValue) => {
-        const updatedData = { ...data, [fieldName]: newValue };
-        setData(updatedData);
-        
-        // Save to file
+    const saveCharacterData = async (updatedData) => {
         try {
             const response = await fetch('/api/save-character', {
                 method: 'POST',
@@ -49,15 +45,30 @@ function App() {
             
             if (!response.ok) {
                 console.error('Failed to save character data');
-                // Fallback: save to localStorage
                 localStorage.setItem('characterData', JSON.stringify(updatedData));
             }
         } catch (error) {
             console.error('Error saving character data:', error);
-            // Fallback: save to localStorage
             localStorage.setItem('characterData', JSON.stringify(updatedData));
         }
     };
+
+    const handleValueChange = async (fieldName, newValue) => {
+        const updatedData = { ...data, [fieldName]: newValue };
+        setData(updatedData);
+        await saveCharacterData(updatedData);
+    };
+
+    const handleStatChange = async (fieldName, newValue) => {
+        const updatedData = { ...data };
+        updatedData.Stats = [...data.Stats];
+        const stat = { ...updatedData.Stats.find(s => s.StatName === fieldName)};
+        stat.Value = newValue;
+
+        setData(updatedData);
+        await saveCharacterData(updatedData);
+    };
+
   return (
 
     <div className='main_div_horizontal_simple '>
@@ -125,7 +136,10 @@ function App() {
                 </div>
 
 
-                <TabsList/>
+                <TabsList 
+                    data={data} 
+                    onStatChange={handleStatChange}
+                />
 
                             
             
