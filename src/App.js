@@ -11,7 +11,6 @@ import initiative from "./Resources/Initiative.JPG"
 
 import Panel from './Components/Panel_info';
 import initialData from "./Character.json"
-import Badge from "./Components/Badge";
 import EditableBadge from "./Components/EditableBadge";
 import TabsList from './Components/TabsList.jsx'
 import InventoryPanel from './Components/InventoryPanel.jsx';

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './Badge.css';
 import './EditableBadge.css';
+import '../Main.css'
 
 function EditableBadge({ Picture, Value, onValueChange, fieldName }) {
     const [isEditing, setIsEditing] = useState(false);

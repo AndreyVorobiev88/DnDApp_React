@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './EditableField.css';
+import '../Main.css';
 
 function EditableField({ value, onValueChange }) {
     const [isEditing, setIsEditing] = useState(false);
@@ -29,25 +29,25 @@ function EditableField({ value, onValueChange }) {
     };
 
     return (
-        <div className="editable-field">
+        <div className="">
             {isEditing ? (
-                <div className="edit-container">
+                <div className="edit_container">
                     <input
                         type="text"
                         value={tempValue}
                         onChange={(e) => setTempValue(e.target.value)}
                         onKeyDown={handleKeyPress}
-                        className="edit-input"
+                        className="edit_input"
                         autoFocus
                     />
-                    <div className="edit-buttons">
-                        <button onClick={handleSave} className="save-btn">✓</button>
-                        <button onClick={handleCancel} className="cancel-btn">✗</button>
+                    <div className="edit_buttons">
+                        <button onClick={handleSave} className="save_btn">✓</button>
+                        <button onClick={handleCancel} className="cancel_btn">✗</button>
                     </div>
                 </div>
             ) : (
                 <span 
-                    className="editable-value" 
+                    className="editable_value" 
                     onClick={handleClick}
                     title="Click to edit"
                 >
