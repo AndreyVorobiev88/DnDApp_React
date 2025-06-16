@@ -33,6 +33,22 @@ function App() {
         }
     }, []);
 
+    const handleValueChange = async (fieldName, newValue) => {
+        const updatedData = { ...data, [fieldName]: newValue };
+        setData(updatedData);
+        await saveCharacterData(updatedData);
+    };
+
+    const handleStatChange = async (fieldName, newValue) => {
+        const updatedData = { ...data };
+        updatedData.Stats = [...data.Stats];
+        const stat = { ...updatedData.Stats.find(s => s.StatName === fieldName)};
+        stat.Value = newValue;
+
+        setData(updatedData);
+        await saveCharacterData(updatedData);
+    };
+    
     const saveCharacterData = async (updatedData) => {
         try {
             const response = await fetch('/api/save-character', {
@@ -53,21 +69,7 @@ function App() {
         }
     };
 
-    const handleValueChange = async (fieldName, newValue) => {
-        const updatedData = { ...data, [fieldName]: newValue };
-        setData(updatedData);
-        await saveCharacterData(updatedData);
-    };
 
-    const handleStatChange = async (fieldName, newValue) => {
-        const updatedData = { ...data };
-        updatedData.Stats = [...data.Stats];
-        const stat = { ...updatedData.Stats.find(s => s.StatName === fieldName)};
-        stat.Value = newValue;
-
-        setData(updatedData);
-        await saveCharacterData(updatedData);
-    };
 
   return (
 

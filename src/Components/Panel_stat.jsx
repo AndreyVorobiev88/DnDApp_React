@@ -6,10 +6,6 @@ import EditableField from "./EditableField";
 
 function Panel_stat (props) {
   
-      
-
-      
-  
       return (
      
             <div className={props.isColored ? ' div_stat background_green' : 'div_stat background_white'} >
