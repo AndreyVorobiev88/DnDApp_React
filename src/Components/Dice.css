@@ -3,5 +3,18 @@
   width: 227px;
   height: 250px;
   border-radius: 15px;
+  cursor:pointer;
 }
 
+
+.dialog_backdrop {
+
+  background-color: #759E7A; /* Полупрозрачный черный */
+  border-color: #ffffff;
+  border-width: 2px;
+
+}
+
+  .border_radius {
+    border-radius: 10px;
+  }

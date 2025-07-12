@@ -1,0 +1,28 @@
+.dialog_backdrop {
+
+  background-color: #759E7A; /* Полупрозрачный черный */
+  
+}
+
+.image_dice {
+    border: 2px solid #fff; /* Цвет и ширину рамки */
+    box-shadow: 2px 1px 2px #999999; /* Цвет и размер тени */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+   
+  }
+
+
+ .text_style {
+
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    
+
+ }

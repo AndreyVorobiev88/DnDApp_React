@@ -1,35 +1,50 @@
 import React, { useState } from 'react';
 import './Dice.css';
 import '../Main.css';
-import Dice20 from "../Resources/Dice20.JPG"
+import CharacterDice from "../Resources/CharacterDice.JPG"
+import DiceCounter from './DiceCounter.jsx';
 
 function Dice() {
 
 
     const [isHovered, setIsHovered] = useState(false);
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
 
     const imageStyle = {
         transition: 'transform 0.3s ease',
         transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-        boxShadow: isHovered ? '0 0 30px rgb(255, 255, 255)' : 'none',
+        boxShadow: isHovered ? '0 0 10px rgb(255, 255, 255)' : 'none',
     };
 
+    const openDialog = () => setIsDialogOpen(true);
+    const closeDialog = () => setIsDialogOpen(false);
+
+ 
     return (
-
         <div className='main_div_horizontal main_padding'>
-
             <img 
-                src = {Dice20} 
+                src={CharacterDice} 
                 className='dice_image' 
                 alt='Dice'
                 style={imageStyle}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
+                onClick={openDialog}
             />
 
-        </div>
+            <dialog 
+                id="DiceModal" 
+                className='dialog_backdrop border_radius' 
+                open={isDialogOpen}
+                onClose={closeDialog}
+            >
+                <DiceCounter/>
+                <button onClick={closeDialog} className='border_radius main_margin_top'>Закрыть</button>
+            </dialog>
 
-    )
+
+        </div>
+    );
 
 }
 
