@@ -10,27 +10,35 @@ import speed from "./Resources/Speed.JPG"
 import initiative from "./Resources/Initiative.JPG"
 
 import Panel from './Components/Panel_info';
-import initialData from "./Character.json"
+//import initialData from "./Character.json"
 import EditableBadge from "./Components/EditableBadge";
 import TabsList from './Components/TabsList.jsx'
 import InventoryPanel from './Components/InventoryPanel.jsx';
 
 
 function App() {
-    const [data, setData] = useState(initialData);
+    const [data, setData] = useState();
 
     // Load data from localStorage on component mount
     useEffect(() => {
-        const savedData = localStorage.getItem('characterData');
-        if (savedData) {
-            try {
-                const parsedData = JSON.parse(savedData);
-                setData(parsedData);
-            } catch (error) {
-                console.error('Error parsing saved character data:', error);
+
+        const func = async function () {
+            const savedData = await loadCharacterData();
+            console.log({savedData});
+            if (savedData) {
+                try {
+                    //const parsedData = JSON.parse(savedData);
+                    setData(savedData.data);
+                } catch (error) {
+                    console.error('Error parsing saved character data:', error);
+                }
             }
         }
+
+        func();
+
     }, []);
+
 
     const handleValueChange = async (fieldName, newValue) => {
         const updatedData = { ...data, [fieldName]: newValue };
@@ -41,10 +49,14 @@ function App() {
     const handleStatChange = async (fieldName, newValue) => {
         const updatedData = { ...data };
         updatedData.Stats = [...data.Stats];
-        const stat = { ...updatedData.Stats.find(s => s.StatName === fieldName)};
+        const a = updatedData.Stats.findIndex(s => s.StatName === fieldName);
+        const stat = { ...updatedData.Stats[a]};
         stat.Value = newValue;
-
+        updatedData.Stats[a] = stat;
         setData(updatedData);
+
+        console.log({updatedData, fieldName, newValue});
+
         await saveCharacterData(updatedData);
     };
     
@@ -69,8 +81,30 @@ function App() {
     };
 
 
+    const loadCharacterData = async () => {
+        try {
+            const response = await fetch('/api/load-character', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            
+            
+            if (!response.ok) {
+                console.error('Failed to load character data');
+            }
 
-  return (
+            return response.json(); 
+
+        } catch (error) {
+            console.error('Error loading character data:', error);
+        }
+
+    };
+
+
+  return data ? (
 
     <div className='main_div_horizontal_simple '>
         <div className='main_padding'>
@@ -112,7 +146,7 @@ function App() {
 
                         <EditableBadge 
                             Picture={HP} 
-                            Value={data.HP + "/" + data.HP}
+                            Value={data.HP}
                             onValueChange={handleValueChange}
                             fieldName="HP"
                         />
@@ -153,7 +187,7 @@ function App() {
 
     </div>
         
-    )
+    ) : "Loading";
 }
 
 export default App;
