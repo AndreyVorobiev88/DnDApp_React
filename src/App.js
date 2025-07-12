@@ -3,17 +3,16 @@ import './Main.css';
 import React, { useState, useEffect } from 'react';
 
 import Portrait from "./Resources/Portrait.JPG"
-import Dice20 from "./Resources/Dice20.JPG"
 import KD from "./Resources/KD.JPG"
 import HP from "./Resources/HP.JPG"
 import speed from "./Resources/Speed.JPG"
 import initiative from "./Resources/Initiative.JPG"
 
 import Panel from './Components/Panel_info';
-//import initialData from "./Character.json"
 import EditableBadge from "./Components/EditableBadge";
 import TabsList from './Components/TabsList.jsx'
 import InventoryPanel from './Components/InventoryPanel.jsx';
+import Dice from './Components/Dice.jsx';
 
 
 function App() {
@@ -129,11 +128,7 @@ function App() {
                         Size={data.Size}    
                     />
 
-                    <div className='main_div_horizontal main_padding'>
-                    
-                        <img src = {Dice20} className='dice_image' alt='Dice'></img>
-
-                    </div>
+                    <Dice/>
 
                     <div className='main_div_horizontal main_space_between secondary_background main_panel'>
 
