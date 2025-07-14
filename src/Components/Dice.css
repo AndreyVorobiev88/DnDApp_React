@@ -18,3 +18,19 @@
   .border_radius {
     border-radius: 10px;
   }
+
+  dialog {
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* или задайте фиксированную ширину, например, 300px */
+    max-width: 50%;
+    border-color: #0C2C1D;
+    z-index: 1000;
+}
+
+/* Затемнение фона (backdrop) */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}

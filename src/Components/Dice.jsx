@@ -34,7 +34,7 @@ function Dice() {
 
             <dialog 
                 id="DiceModal" 
-                className='dialog_backdrop border_radius' 
+                className='secondary_background border_radius dialog dialog::backdrop' 
                 open={isDialogOpen}
                 onClose={closeDialog}
             >

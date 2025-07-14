@@ -3,14 +3,21 @@ import './Badge.css';
 
 function Badge(props) {
 
+    const handleClick = () => {
+        if (props.onClick) {
+            props.onClick(); 
+        }
+    };
+
     return (
 
-        <div className="main_div_vertical align_center main_padding">
+        <div className="main_div_vertical align_center" onClick={handleClick}>
 
-            <img src={props.Picture} className="image_badge" alt=""></img>
+            <img src={props.Picture} className="image_badge main_cursor" alt="" ></img>
             <span className="main_text_info text_larger">{props.Value}</span>
 
         </div>
+        
 
     )
 
