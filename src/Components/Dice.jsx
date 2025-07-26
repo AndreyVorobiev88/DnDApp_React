@@ -39,7 +39,7 @@ function Dice() {
                 onClose={closeDialog}
             >
                 <DiceCounter/>
-                <button onClick={closeDialog} className='border_radius main_margin_top'>Закрыть</button>
+                {/*<button onClick={closeDialog} className='border_radius main_margin_top'>Закрыть</button>*/}
             </dialog>
 
 

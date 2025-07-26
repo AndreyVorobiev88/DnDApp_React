@@ -15,7 +15,7 @@
   }
 
 
- .text_style {
+ .text_style_black {
 
   font-family: Inter;
   font-weight: 600;
@@ -28,9 +28,32 @@
 
  }
 
+ 
+.text_style_white {
+
+font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+
+}
+
  .space_between {
 
+  display: flex;
   justify-content: space-between;
+
+ }
+
+ .align_center {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
  }
 
@@ -40,21 +63,61 @@
 
  }
 
- .green_layout {
+ .minus_layout {
 
-  width: 154.6666717529297;
-  height: 52;
-  min-width: 100px;
+  min-height: 50px;
+  min-width: 200px;
   gap: 10px;
   opacity: 1;
-  border-radius: 15px;
-  border-width: 2px;
   padding-right: 8px;
   padding-left: 8px;
 
-
+  border-radius: 15px;
+  border-width: 2px;
+  border: 2px solid #D9E3DA;
 
  }
+
+.plus_layout {
+
+  min-height: 50px;
+  min-width: 200px;
+  gap: 10px;
+  opacity: 1;
+
+  border-radius: 15px;
+  border-width: 2px;
+  background: #D9E3DA;
+  border-color: #D9E3DA;
+
+ }
+ 
+.number_layout {
+
+  min-height: 50px;
+  min-width: 200px;
+  gap: 10px;
+  opacity: 1;
+
+  border-radius: 15px;
+  background: #D9E3DA;
+  border: 2px solid #1C492B;
+
+ }
+
+.button_layout {
+
+  min-height: 50px;
+  min-width: 70px;
+  gap: 10px;
+  opacity: 1;
+
+  border-radius: 15px;
+  background: #1C492B;
+  border: 2px solid #1C492B;
+
+ }
+
 
 
  

@@ -29,30 +29,45 @@ function DiceCounter() {
 
         <div>
             <div>
-                <p className='text_style'>Бросок кубика</p>
+                <p className='text_style_black'>Бросок кубика</p>
             </div>
 
             <div className="main_div_horizontal space_between gap">
  
-                <img src={D4} className = "gap" alt = "D4"></img>
-                <img src={D6} className = "gap" alt = "D6"></img>
-                <img src={D8} className = "gap" alt = "D8"></img>
-                <img src={D10} className = "gap" alt = "D10"></img>
-                <img src={D12} className = "gap" alt = "D12"></img>
-                <img src={D20} className = "gap" alt = "D20"></img>
+                <img src={D4} className = "gap main_cursor" alt = "D4"></img>
+                <img src={D6} className = "gap main_cursor" alt = "D6"></img>
+                <img src={D8} className = "gap main_cursor" alt = "D8"></img>
+                <img src={D10} className = "gap main_cursor" alt = "D10"></img>
+                <img src={D12} className = "gap main_cursor" alt = "D12"></img>
+                <img src={D20} className = "gap main_cursor" alt = "D20"></img>
 
             </div>
 
-            <div>
-
-                <layout className="green_layout"> </layout>
+            <div className='main_div_horizontal main_margin_top'>
 
 
+                <div className="minus_layout align_center main_cursor"> 
+                    <span className='text_style_black '>-</span>
+                </div>
+
+                <div className="number_layout align_center"> 
+                    <span className='text_style_black'>1</span>
+                </div>
+
+                <div className="plus_layout align_center main_cursor"> 
+                    <span className='text_style_black'>+</span>
+                </div>
+
+            </div>
+
+            <div className='button_layout align_center main_margin_top main_cursor'>
+
+                <span className='text_style_white'>Бросить</span>
 
             </div>
 
 
-
+{/*
             <div className='main_div_horizontal'>
 
                 <Badge 
@@ -93,7 +108,7 @@ function DiceCounter() {
 
                 <span id="D6_Value">{D20}</span>
 
-            </div>
+            </div> */}
 
         </div>
 
