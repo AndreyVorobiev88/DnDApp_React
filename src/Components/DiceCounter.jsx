@@ -7,6 +7,14 @@ import '../Main.css';
 import Dice20 from "../Resources/Dice20.JPG"
 import Dice6 from "../Resources/Dice6.JPG"
 
+import D4 from "../Resources/D4.JPG"
+import D6 from "../Resources/D6.JPG"
+import D8 from "../Resources/D8.JPG"
+import D10 from "../Resources/D10.JPG"
+import D12 from "../Resources/D12.JPG"
+import D20 from "../Resources/D20.JPG"
+
+
 
 function RandomIntegerInRange(min, max) {
   
@@ -15,14 +23,35 @@ function RandomIntegerInRange(min, max) {
 }
 function DiceCounter() {
 
-    let D20 = 0;
+    let D_20 = 0;
 
     return (
 
         <div>
-            <p className='test_style'>Бросок кубика</p>
+            <div>
+                <p className='text_style'>Бросок кубика</p>
+            </div>
 
-            
+            <div className="main_div_horizontal space_between gap">
+ 
+                <img src={D4} className = "gap" alt = "D4"></img>
+                <img src={D6} className = "gap" alt = "D6"></img>
+                <img src={D8} className = "gap" alt = "D8"></img>
+                <img src={D10} className = "gap" alt = "D10"></img>
+                <img src={D12} className = "gap" alt = "D12"></img>
+                <img src={D20} className = "gap" alt = "D20"></img>
+
+            </div>
+
+            <div>
+
+                <layout className="green_layout"> </layout>
+
+
+
+            </div>
+
+
 
             <div className='main_div_horizontal'>
 
@@ -40,7 +69,7 @@ function DiceCounter() {
                 
                 />
 
-                <span id="D20_Value">{D20}</span>
+                <span id="D20_Value">{D_20}</span>
 
             </div>
 
