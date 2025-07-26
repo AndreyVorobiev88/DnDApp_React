@@ -23,7 +23,9 @@ function RandomIntegerInRange(min, max) {
 }
 function DiceCounter() {
 
-    let D_20 = 0;
+    {/*let D_20 = 0;*/ }
+
+    let iAmount = 1;
 
     return (
 
@@ -46,16 +48,36 @@ function DiceCounter() {
             <div className='main_div_horizontal main_margin_top'>
 
 
-                <div className="minus_layout align_center main_cursor"> 
+                <div className="minus_layout align_center main_cursor"
+                    onClick={() => {
+                        
+                        let valueDisplayDiceAmount = document.getElementById("dice_amount");
+                        if (iAmount > 1) iAmount -= 1;
+                        valueDisplayDiceAmount.textContent = iAmount;
+                    
+                    
+                    }        
+                    }
+                > 
                     <span className='text_style_black '>-</span>
                 </div>
 
                 <div className="number_layout align_center"> 
-                    <span className='text_style_black'>1</span>
+                    <span className='text_style_black' id = "dice_amount">1</span>
                 </div>
 
-                <div className="plus_layout align_center main_cursor"> 
-                    <span className='text_style_black'>+</span>
+                <div className="plus_layout align_center main_cursor"
+                    onClick={() => {
+                        
+                        let valueDisplayDiceAmount = document.getElementById("dice_amount");
+                        iAmount += 1;
+                        valueDisplayDiceAmount.textContent = iAmount;
+                    
+                    
+                    }        
+                    }
+                > 
+                    <span className='text_style_black' >+</span>
                 </div>
 
             </div>
