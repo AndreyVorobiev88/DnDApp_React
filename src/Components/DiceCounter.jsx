@@ -13,6 +13,7 @@ import D8 from "../Resources/D8.JPG"
 import D10 from "../Resources/D10.JPG"
 import D12 from "../Resources/D12.JPG"
 import D20 from "../Resources/D20.JPG"
+import { dialogAnatomy } from '@ark-ui/react';
 
 
 
@@ -26,6 +27,7 @@ function DiceCounter() {
     {/*let D_20 = 0;*/ }
 
     let iAmount = 1;
+    let iRez = 0;
 
     return (
 
@@ -36,12 +38,12 @@ function DiceCounter() {
 
             <div className="main_div_horizontal space_between gap">
  
-                <img src={D4} className = "gap main_cursor" alt = "D4"></img>
-                <img src={D6} className = "gap main_cursor" alt = "D6"></img>
-                <img src={D8} className = "gap main_cursor" alt = "D8"></img>
-                <img src={D10} className = "gap main_cursor" alt = "D10"></img>
-                <img src={D12} className = "gap main_cursor" alt = "D12"></img>
-                <img src={D20} className = "gap main_cursor" alt = "D20"></img>
+                <img src={D4} className = "gap main_cursor" alt = "D4"/>
+                <img src={D6} className = "gap main_cursor" alt = "D6"/>
+                <img src={D8} className = "gap main_cursor" alt = "D8"/>
+                <img src={D10} className = "gap main_cursor" alt = "D10"/>
+                <img src={D12} className = "gap main_cursor" alt = "D12"/>
+                <img src={D20} className = "gap main_cursor" alt = "D20"/>
 
             </div>
 
@@ -82,14 +84,37 @@ function DiceCounter() {
 
             </div>
 
-            <div className='button_layout align_center main_margin_top main_cursor'>
+            <div className='main_div_horizontal align_center'>
 
-                <span className='text_style_white'>Бросить</span>
+                    <div className='button_layout align_center main_margin_top main_cursor'
+                        onClick={() => {
+                            
+                            let valueDiceResult = document.getElementById("dice_result");
+                            iRez = "= " + RandomIntegerInRange(1,20);
+                            valueDiceResult.textContent = iRez;
+
+                            valueDiceResult.style.display = "block";
+
+                        
+                        }}
+
+                    >
+
+                        <span className='text_style_white'>Бросить</span>
+                        
+                    </div>
+
+                    <div className='main_margin_top'>
+
+                        <span style={{ display: 'none' }}  className='text_style_black margin_left_10' id="dice_result"> ={iRez}</span>
+                    </div>
 
             </div>
 
+        </div>
 
-{/*
+
+    /*
             <div className='main_div_horizontal'>
 
                 <Badge 
@@ -130,9 +155,7 @@ function DiceCounter() {
 
                 <span id="D6_Value">{D20}</span>
 
-            </div> */}
-
-        </div>
+            </div> */
 
     )
 

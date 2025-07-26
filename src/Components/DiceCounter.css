@@ -4,18 +4,21 @@
   
 }
 
-.image_dice {
-    border: 2px solid #fff; /* Цвет и ширину рамки */
-    box-shadow: 2px 1px 2px #999999; /* Цвет и размер тени */
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-   
-  }
-
 
  .text_style_black {
+
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+ }
+
+ 
+.text_style_white {
 
   font-family: Inter;
   font-weight: 600;
@@ -24,21 +27,7 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-
-
- }
-
- 
-.text_style_white {
-
-font-family: Inter;
-font-weight: 600;
-font-style: Semi Bold;
-font-size: 20px;
-line-height: 100%;
-letter-spacing: 0%;
-text-align: center;
-color: #FFFFFF;
+  color: #FFFFFF;
 
 }
 
@@ -108,7 +97,7 @@ color: #FFFFFF;
 .button_layout {
 
   min-height: 50px;
-  min-width: 70px;
+  min-width: 700px;
   gap: 10px;
   opacity: 1;
 
