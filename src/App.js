@@ -12,7 +12,7 @@ import Panel from './Components/Panel_info';
 import EditableBadge from "./Components/EditableBadge";
 import TabsList from './Components/TabsList.jsx'
 import InventoryPanel from './Components/InventoryPanel.jsx';
-import Dice from './Components/Dice.jsx';
+import MainDice from './Components/MainDice.jsx';
 
 
 function App() {
@@ -128,7 +128,7 @@ function App() {
                         Size={data.Size}    
                     />
 
-                    <Dice/>
+                    <MainDice/>
 
                     <div className='main_div_horizontal main_space_between secondary_background main_panel'>
 

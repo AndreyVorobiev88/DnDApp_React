@@ -1,11 +1,8 @@
 import React from 'react';
 
-import Badge from "./Badge.jsx"
-
 import './DiceCounter.css';
 import '../Main.css';
-import Dice20 from "../Resources/Dice20.JPG"
-import Dice6 from "../Resources/Dice6.JPG"
+import Dice from './Dice'
 
 import D4 from "../Resources/D4.JPG"
 import D6 from "../Resources/D6.JPG"
@@ -37,13 +34,14 @@ function DiceCounter() {
             </div>
 
             <div className="main_div_horizontal space_between gap">
- 
-                <img src={D4} className = "gap main_cursor" alt = "D4"/>
-                <img src={D6} className = "gap main_cursor" alt = "D6"/>
-                <img src={D8} className = "gap main_cursor" alt = "D8"/>
-                <img src={D10} className = "gap main_cursor" alt = "D10"/>
-                <img src={D12} className = "gap main_cursor" alt = "D12"/>
-                <img src={D20} className = "gap main_cursor" alt = "D20"/>
+
+
+                <Dice Picture={D4}></Dice>
+                <Dice Picture={D6}></Dice>
+                <Dice Picture={D8}></Dice>
+                <Dice Picture={D10}></Dice>
+                <Dice Picture={D12}></Dice>
+                <Dice Picture={D20}></Dice>
 
             </div>
 
