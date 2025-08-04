@@ -107,6 +107,16 @@
 
  }
 
+ .visible {
+  display: block;
+ }
+
+ .hidden {
+  display: none;
+
+ }
+
+
 
 
  

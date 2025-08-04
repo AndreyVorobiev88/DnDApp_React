@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 
 import './DiceCounter.css';
 import '../Main.css';
@@ -21,10 +22,13 @@ function RandomIntegerInRange(min, max) {
 }
 function DiceCounter() {
 
+
+    const [SelectedDiceRank, setSelectedDiceRank] = useState(false);
+    const [diceAmount, setDiceAmount] = useState(1);
+    const [diceResult, setDiceResult] = useState(null);
+
     {/*let D_20 = 0;*/ }
 
-    let iAmount = 1;
-    let iRez = 0;
 
     return (
 
@@ -36,12 +40,12 @@ function DiceCounter() {
             <div className="main_div_horizontal space_between gap">
 
 
-                <Dice Picture={D4}></Dice>
-                <Dice Picture={D6}></Dice>
-                <Dice Picture={D8}></Dice>
-                <Dice Picture={D10}></Dice>
-                <Dice Picture={D12}></Dice>
-                <Dice Picture={D20}></Dice>
+                <Dice isSelected={SelectedDiceRank===4} onSelect={()=>{setSelectedDiceRank(4)}} Picture={D4}></Dice>
+                <Dice isSelected={SelectedDiceRank===6} onSelect={()=>{setSelectedDiceRank(6)}}Picture={D6}></Dice>
+                <Dice isSelected={SelectedDiceRank===8} onSelect={()=>{setSelectedDiceRank(8)}}Picture={D8}></Dice>
+                <Dice isSelected={SelectedDiceRank===10} onSelect={()=>{setSelectedDiceRank(10)}}Picture={D10}></Dice>
+                <Dice isSelected={SelectedDiceRank===12} onSelect={()=>{setSelectedDiceRank(12)}}Picture={D12}></Dice>
+                <Dice isSelected={SelectedDiceRank===20} onSelect={()=>{setSelectedDiceRank(20)}}Picture={D20}></Dice>
 
             </div>
 
@@ -51,11 +55,8 @@ function DiceCounter() {
                 <div className="minus_layout align_center main_cursor"
                     onClick={() => {
                         
-                        let valueDisplayDiceAmount = document.getElementById("dice_amount");
-                        if (iAmount > 1) iAmount -= 1;
-                        valueDisplayDiceAmount.textContent = iAmount;
-                    
-                    
+                        setDiceAmount((prev)=>{return prev-1})
+
                     }        
                     }
                 > 
@@ -63,17 +64,14 @@ function DiceCounter() {
                 </div>
 
                 <div className="number_layout align_center"> 
-                    <span className='text_style_black' id = "dice_amount">1</span>
+                    <span className='text_style_black' id = "dice_amount">{diceAmount}</span>
                 </div>
 
                 <div className="plus_layout align_center main_cursor"
                     onClick={() => {
                         
-                        let valueDisplayDiceAmount = document.getElementById("dice_amount");
-                        iAmount += 1;
-                        valueDisplayDiceAmount.textContent = iAmount;
-                    
-                    
+                        setDiceAmount((prev)=>{return prev+1})
+                                     
                     }        
                     }
                 > 
@@ -87,11 +85,16 @@ function DiceCounter() {
                     <div className='button_layout align_center main_margin_top main_cursor'
                         onClick={() => {
                             
-                            let valueDiceResult = document.getElementById("dice_result");
-                            iRez = "= " + RandomIntegerInRange(1,20);
-                            valueDiceResult.textContent = iRez;
+                                                      
+                            let iRez = 0;
 
-                            valueDiceResult.style.display = "block";
+                            for (let i = 0; i < diceAmount; i++) {
+
+                                iRez += RandomIntegerInRange(1,SelectedDiceRank);
+
+                            }
+                            
+                            setDiceResult(iRez);
 
                         
                         }}
@@ -104,7 +107,7 @@ function DiceCounter() {
 
                     <div className='main_margin_top'>
 
-                        <span style={{ display: 'none' }}  className='text_style_black margin_left_10' id="dice_result"> ={iRez}</span>
+                        <span className={`text_style_black margin_left_10 ${diceResult ? "visible" : "hidden"}`} id="dice_result"> = {diceResult}</span>
                     </div>
 
             </div>
