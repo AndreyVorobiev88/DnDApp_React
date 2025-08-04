@@ -27,9 +27,6 @@ function DiceCounter() {
     const [diceAmount, setDiceAmount] = useState(1);
     const [diceResult, setDiceResult] = useState(null);
 
-    {/*let D_20 = 0;*/ }
-
-
     return (
 
         <div>
@@ -114,49 +111,6 @@ function DiceCounter() {
 
         </div>
 
-
-    /*
-            <div className='main_div_horizontal'>
-
-                <Badge 
-                    Picture = {Dice20} 
-                    Value = {"D20"}
-                
-                    onClick={() => {
-                        
-                        let valueDisplayD20 = document.getElementById("D20_Value");
-                        valueDisplayD20.textContent = RandomIntegerInRange(1,20);
-                    
-                    
-                    }}
-                
-                />
-
-                <span id="D20_Value">{D_20}</span>
-
-            </div>
-
-            <div className='main_div_horizontal main_margin_top'>
-
-                <img
-
-                    src={Dice6}
-                    alt = "Dice6"
-                    className='image_dice'
-                    onClick={() => {
-                        
-                        let valueDisplayD20 = document.getElementById("D6_Value");
-                        valueDisplayD20.textContent = RandomIntegerInRange(1,6);
-                    
-                    
-                    }
-                    }
-                
-                />
-
-                <span id="D6_Value">{D20}</span>
-
-            </div> */
 
     )
 
