@@ -3,8 +3,6 @@ import '../Main.css';
 import './InventoryPanel.css';
 import { useState } from 'react';
 
-import StatsSkill from "./Stats_Skill";
-
 import Bag from "../Resources/Bag.jpg"
 import Scroll from "../Resources/Scroll.jpg"
 
@@ -17,7 +15,7 @@ function InventoryPanel(props) {
 
     return (
         <div className="main_background main_margin inventory_panel_size main_div_vertical">
-            <div className="main_div_horizontal">
+            <div className="align">
                 <img 
                     className={`image_size margin_20 ${activeTab === 'bag' ? '' : 'inactive_picture'}`} 
                     src={Bag} 

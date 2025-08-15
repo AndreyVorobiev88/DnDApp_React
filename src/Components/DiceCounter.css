@@ -1,10 +1,3 @@
-.dialog_backdrop {
-
-  background-color: #759E7A; 
-  
-}
-
-
  .text_style_black {
 
     font-family: Inter;
@@ -31,13 +24,6 @@
 
 }
 
- .space_between {
-
-  display: flex;
-  justify-content: space-between;
-
- }
-
  .align_center {
 
   display: flex;
@@ -46,21 +32,13 @@
 
  }
 
- .gap {
-
-  gap: 8px;
-
- }
-
  .minus_layout {
 
   min-height: 50px;
   min-width: 200px;
-  gap: 10px;
   opacity: 1;
   padding-right: 8px;
   padding-left: 8px;
-
   border-radius: 15px;
   border-width: 2px;
   border: 2px solid #D9E3DA;
@@ -71,9 +49,7 @@
 
   min-height: 50px;
   min-width: 200px;
-  gap: 10px;
   opacity: 1;
-
   border-radius: 15px;
   border-width: 2px;
   background: #D9E3DA;
@@ -85,9 +61,7 @@
 
   min-height: 50px;
   min-width: 200px;
-  gap: 10px;
   opacity: 1;
-
   border-radius: 15px;
   background: #D9E3DA;
   border: 2px solid #1C492B;
@@ -97,23 +71,48 @@
 .button_layout {
 
   min-height: 50px;
-  min-width: 700px;
-  gap: 10px;
+  min-width: 720px;
   opacity: 1;
-
   border-radius: 15px;
   background: #1C492B;
   border: 2px solid #1C492B;
 
  }
 
+ .button_layout_secondary {
+
+  min-height: auto;
+  min-width: auto;
+  width: fit-content;
+  height: fit-content;
+  opacity: 1;
+
+  border-radius: 20px;
+  background: #D9E3DA;
+  border: 2px solid #1C492B;
+
+ }
+
+ .result-container {
+  min-width: 80px; 
+  min-height: 50px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
  .visible {
-  display: block;
+  opacity: 1;
  }
 
  .hidden {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
 
+ .margin_10{
+  margin: 10px;
  }
 
 

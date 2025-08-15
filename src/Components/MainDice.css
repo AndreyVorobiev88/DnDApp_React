@@ -24,9 +24,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 50%;
+    width: 850px; /* Замените max-width на width: auto */
+    max-width: 50%; /* Минимальная ширина */
+    margin: 0; /* Убираем стандартные отступы */
+    padding: 20px;
     border-color: #0C2C1D;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 /* Затемнение фона (backdrop) */

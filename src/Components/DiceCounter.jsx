@@ -32,8 +32,7 @@ function DiceCounter() {
                 <p className='text_style_black'>Бросок кубика</p>
             </div>
 
-            <div className="main_div_horizontal space_between gap">
-
+            <div className="main_div_horizontal">
 
                 <Dice isSelected={SelectedDiceRank===4} onSelect={()=>{setSelectedDiceRank(4)}} Picture={D4}></Dice>
                 <Dice isSelected={SelectedDiceRank===6} onSelect={()=>{setSelectedDiceRank(6)}}Picture={D6}></Dice>
@@ -75,12 +74,15 @@ function DiceCounter() {
 
             </div>
 
-            <div className='main_div_horizontal align_center'>
+            <div className='main_div_horizontal align_center main_margin_top button_layout_secondary'>
 
-                    <div className='button_layout align_center main_margin_top main_cursor'
-                        onClick={() => {
+                    <div className='button_layout align_center main_cursor'
+                        onClick={async() => {
                             
-                                                      
+                            if (!SelectedDiceRank) return;  
+                            setDiceResult(null);       
+                            await new Promise(resolve => setTimeout(resolve, 50));
+                            
                             let iRez = 0;
 
                             for (let i = 0; i < diceAmount; i++) {
@@ -91,7 +93,6 @@ function DiceCounter() {
                             
                             setDiceResult(iRez);
 
-                        
                         }}
 
                     >
@@ -100,9 +101,10 @@ function DiceCounter() {
                         
                     </div>
 
-                    <div className='main_margin_top'>
-
-                        <span className={`text_style_black margin_left_10 ${diceResult ? "visible" : "hidden"}`} id="dice_result"> = {diceResult}</span>
+                    <div className="result-container">
+                        <span className={`text_style_black ${diceResult ? "visible" : "hidden"}`}>
+                        = {diceResult}
+                        </span>
                     </div>
 
             </div>
