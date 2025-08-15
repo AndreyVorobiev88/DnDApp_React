@@ -49,6 +49,7 @@ function TabsList(props) {
                             Image={statImages[data.Stats.indexOf(stat)]}
                             isColored={index % 2 === 0}
                             onStatChange={props.onStatChange}
+                            onStatBonusChange={props.onStatBonusChange}
                         />
                         ))
                         }

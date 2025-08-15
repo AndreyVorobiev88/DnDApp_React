@@ -58,6 +58,20 @@ function App() {
 
         await saveCharacterData(updatedData);
     };
+
+    const handleStatBonusChange = async (statName, newValue) => {
+        const updatedData = { ...data };
+        updatedData.Stats = [...data.Stats];
+        const statIndex = updatedData.Stats.findIndex(s => s.StatName === statName);
+        
+        if (statIndex >= 0) {
+            const stat = { ...updatedData.Stats[statIndex] };
+            stat.Bonus = newValue;
+            updatedData.Stats[statIndex] = stat;
+            setData(updatedData);
+            await saveCharacterData(updatedData);
+        }
+    };
     
     const saveCharacterData = async (updatedData) => {
         try {
@@ -169,6 +183,7 @@ function App() {
                 <TabsList 
                     data={data} 
                     onStatChange={handleStatChange}
+                    onStatBonusChange={handleStatBonusChange}
                 />
 
                             

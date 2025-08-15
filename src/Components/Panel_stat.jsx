@@ -23,21 +23,22 @@ function Panel_stat (props) {
                   <div className="size_value_box div_stat">
 
                         <span className={"stat_text"}>
-                              {/*{props.Stat.Value}*/
-                              
-                                    <EditableField 
-                                          value={props.Stat.Value}
-                                          onValueChange={(newValue) => {props.onStatChange(props.Stat.StatName, newValue)}}
-                                          />
-                              
-                              
-                              
-                              }
-
+                        {/*{props.Stat.Value}*/
+                        
+                              <EditableField 
+                                    value={props.Stat.Value}
+                                    onValueChange={(newValue) => {props.onStatChange(props.Stat.StatName, newValue)}}
+                              />
+                        }
                         </span> 
 
                         <span className={"bonus_text"} >
-                              {props.Stat.Bonus}
+                        {
+                              <EditableField 
+                                    value={props.Stat.Bonus}
+                                    onValueChange={(newValue) => {props.onStatBonusChange(props.Stat.StatName, newValue)}}
+                              />
+                        }
                         </span> 
                   </div>
 

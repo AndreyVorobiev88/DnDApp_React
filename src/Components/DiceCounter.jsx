@@ -79,19 +79,24 @@ function DiceCounter() {
                     <div className='button_layout align_center main_cursor'
                         onClick={async() => {
                             
-                            if (!SelectedDiceRank) return;  
-                            setDiceResult(null);       
+                            if (!SelectedDiceRank) return; 
+
+                            setDiceResult(null);    
                             await new Promise(resolve => setTimeout(resolve, 50));
-                            
-                            let iRez = 0;
 
-                            for (let i = 0; i < diceAmount; i++) {
+                            if (SelectedDiceRank===20) {
 
-                                iRez += RandomIntegerInRange(1,SelectedDiceRank);
-
+                                setDiceAmount(1);
+                                setDiceResult (RandomIntegerInRange(1,SelectedDiceRank))
                             }
+                            else {
                             
-                            setDiceResult(iRez);
+                                let iRez = 0;
+                                for (let i = 0; i < diceAmount; i++) {
+                                    iRez += RandomIntegerInRange(1,SelectedDiceRank);
+                                }
+                                setDiceResult(iRez);
+                            }
 
                         }}
 
