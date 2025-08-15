@@ -5,14 +5,12 @@ import './DiceCounter.css';
 import '../Main.css';
 import Dice from './Dice'
 
-import D4 from "../Resources/D4.JPG"
-import D6 from "../Resources/D6.JPG"
-import D8 from "../Resources/D8.JPG"
-import D10 from "../Resources/D10.JPG"
-import D12 from "../Resources/D12.JPG"
-import D20 from "../Resources/D20.JPG"
-import { dialogAnatomy } from '@ark-ui/react';
-
+import D4 from "../Resources/D4.png"
+import D6 from "../Resources/D6.png"
+import D8 from "../Resources/D8.png"
+import D10 from "../Resources/D10.png"
+import D12 from "../Resources/D12.png"
+import D20 from "../Resources/D20.png"
 
 
 function RandomIntegerInRange(min, max) {

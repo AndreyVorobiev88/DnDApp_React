@@ -38,8 +38,18 @@ function MainDice() {
                 open={isDialogOpen}
                 onClose={closeDialog}
             >
+
+
+                    <button 
+                        onClick={closeDialog}
+                        className='close_button'
+                        aria-label="Закрыть"
+                    >
+                        X
+                    </button>
+
                 <DiceCounter/>
-                {/*<button onClick={closeDialog} className='border_radius main_margin_top'>Закрыть</button>*/}
+
             </dialog>
 
 

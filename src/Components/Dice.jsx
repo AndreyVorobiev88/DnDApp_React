@@ -10,14 +10,12 @@ function Dice(props) {
     const [isHovered, setIsHovered] = useState(false);
 
     const imageStyle = {
-        transition: 'transform 0.3s ease',
-        transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-        boxShadow: isHovered ? '0 0 10px #D9E3DA' : 'none',
-
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease',
+        transform: isHovered ? 'scale(1.3)' : 'scale(1)',
         boxShadow: isSelected ? '0 0 10px #1C492B' : 'none',
+        backgroundColor: isSelected ? '#E3ECE4' : 'transparent', 
+        borderRadius: isSelected ? '15px' : '0', 
     };
-
-
 
     return (
 
