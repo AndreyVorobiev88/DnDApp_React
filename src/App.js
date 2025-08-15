@@ -186,14 +186,10 @@ function App() {
                     onStatBonusChange={handleStatBonusChange}
                 />
 
-                            
-            
             </div>
         </div>
 
         <InventoryPanel></InventoryPanel>
-
-
 
     </div>
         

@@ -1,0 +1,64 @@
+.big_text {
+
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.header_text {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Italic;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #1C492B;
+    margin-left: 10px;
+
+}
+
+.simple_text {
+
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-left: 10px;
+
+}
+
+.card_layout {
+
+    width: 320px;
+    border-radius: 15px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    gap: 16px;
+    opacity: 1;
+    border-radius: 15px;
+    border: 2px solid #0C2C1D;
+    margin-left: 15px;
+
+}
+
+.chapter_layout {
+
+    border-radius: 15px;
+    border: 2px solid #759E7A;
+    background-color: #759E7A33;
+    margin-top: 15px;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}

@@ -5,39 +5,13 @@
 
 }
 
-.margin_top {
 
-    margin-top: 15px;
-
-}
-
-.margin_left {
-
-    margin-left: 15px;
-
-}
-
-.raduis {
-
-    border-radius: 15px;
-    box-shadow: 2px 1px 5px #a2a2a2; /* Цвет и размер тени */
-    margin: 10px;
-}
-
-.color {
-    color: #171817; ;
-}
-
-.size_item_trigger {
-    width: 380px;
-}
-
-.div_item_trigger {
+.div_item {
 
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap ;
     align-content: center;
     align-items: center;
+    gap: 20px
 
 }
