@@ -18,6 +18,7 @@ import data from "../Character.json"
 import PanelStat from './Panel_stat';
 import SpecSkillPanel from "./SpecSkillPanel";
 import AccordeonSpell from "./AccordeonSpell";
+import SpellCard from "./SpellCard";
 
 
 const statImages = [strength, dexterity, constitution, intelligence, wisdom, charisma, perception];

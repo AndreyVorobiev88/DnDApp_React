@@ -13,8 +13,12 @@ function SpellCard(props) {
 
         <div className="card_layout">
             <div className="main_div_horizontal">
-                <span className="big_text">{props.SpellName}</span>
-                <span className="main_text_bonus">Lv:{props.SpellLevel}</span>
+                <div className="main_div_horizontal">
+                    <div className="level_layout padding_10">
+                        <span className="level_text ">{props.SpellLevel}</span>
+                    </div>
+                    <span className="big_text margin_left_10">{props.SpellName}</span>
+                </div>
 
                 <img src={arrow} alt="Arrow" className="main_cursor"
 

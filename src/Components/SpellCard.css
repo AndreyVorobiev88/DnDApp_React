@@ -7,6 +7,10 @@
     letter-spacing: 0%;
 }
 
+.padding_10 {
+    padding: 10px;
+}
+
 .header_text {
     font-family: Inter;
     font-weight: 600;
@@ -28,6 +32,16 @@
     line-height: 100%;
     letter-spacing: 0%;
     margin-left: 10px;
+
+}
+
+.level_text {
+
+    font-style:normal;
+    font-weight: 600;
+    color:rgb(255, 255, 255);
+    font-size:large;
+    font-family: Inter;
 
 }
 
@@ -53,6 +67,14 @@
     border: 2px solid #759E7A;
     background-color: #759E7A33;
     margin-top: 15px;
+}
+
+.level_layout {
+
+    border-radius: 50%;
+    border: 2px solid #0C2C1D;
+    background-color: #0C2C1D;
+    opacity: 100%;
 }
 
 .visible {

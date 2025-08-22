@@ -1,6 +1,5 @@
 import React from "react";
 import './AccordeonSpell.css';
-import {Accordion} from "@ark-ui/react"
 
 import SpellCard from "./SpellCard";
 
