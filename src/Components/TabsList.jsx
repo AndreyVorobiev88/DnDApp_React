@@ -17,7 +17,6 @@ import data from "../Character.json"
 
 import PanelStat from './Panel_stat';
 import SpecSkillPanel from "./SpecSkillPanel";
-import AccordeonSpell from "./AccordeonSpell";
 import SpellCard from "./SpellCard";
 
 
@@ -67,7 +66,23 @@ function TabsList(props) {
 
     
                 <TabPanel>
-                    <AccordeonSpell Spells={data.Spells} />
+
+                    <div className="div_item">
+                        {data.Spells.map((item) => (
+                        <SpellCard
+                            SpellName={item.SpellName}
+                            SpellLevel={item.Level}
+                            Distance={item.Distance}
+                            School={item.School}
+                            Time={item.Time}
+                            BaseDamage={item.BaseDamage}
+                            Description={item.Description}
+
+                        >
+                        </SpellCard>))
+                        }
+                    </div>
+
                 </TabPanel>            
 
             </Tabs>

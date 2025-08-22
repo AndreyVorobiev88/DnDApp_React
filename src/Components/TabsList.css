@@ -27,3 +27,13 @@
     justify-content: flex-start;
     align-content: center;
 }
+
+.div_item {
+
+    display: flex;
+    flex-wrap: wrap ;
+    align-content: center;
+    align-items: center;
+    gap: 20px
+
+}
